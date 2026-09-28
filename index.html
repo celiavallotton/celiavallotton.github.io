@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>The Birthday Archive</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         MAIN APPLICATION
+    ====================================================== -->
+
+    <main class="app">
+
+
+        <!-- =================================================
+             HOME SCREEN
+        ================================================== -->
+
+        <section id="home-screen" class="screen active">
+
+            <div class="home-content">
+
+
+                <p class="eyebrow">
+                    9/28/2026
+                </p>
+
+
+                <h1>
+                    WHAT! YOU'RE 20???!!!
+                </h1>
+
+
+                <p class="subtitle">
+                    This project was started 100 days ago on the dot on June 20th.
+                    I have for you a couple of gifts I made, this hardrive being one of them.
+                    I hope you enjoy!! <br>
+                    Note: All passwords mus be entered with no spaces or capitols :)
+                </p>
+
+
+
+                <!-- =========================================
+                     TEN ARCHIVE BUTTONS
+
+                     DO NOT NEED TO CHANGE THESE LATER.
+                     JavaScript handles the images/text.
+                ========================================== -->
+
+                <div class="main-menu">
+
+
+                    <button
+                        class="archive-button"
+                        id="archive-button-0"
+                        onclick="requestPassword(0)"
+                    >
+
+                        <div class="button-overlay"></div>
+
+                        <div class="button-content">
+
+                            <span class="lock">
+                                🔐
+                            </span>
+
+                            <span class="days">
+                                100–91
+                            </span>
+
+                        </div>
+
+                    </button>
+
+
+
+                    <button
+                        class="archive-button"
+                        id="archive-button-1"
+                        onclick="requestPassword(1)"
+                    >
+
+                        <div class="button-overlay"></div>
+
+                        <div class="button-content">
+
+                            <span class="lock">
+                                🔐
+                            </span>
+
+                            <span class="days">
+                                90–81
+                            </span>
+
+                        </div>
+
+                    </button>
+
+
+
+                    <button
+                        class="archive-button"
+                        id="archive-button-2"
+                        onclick="requestPassword(2)"
+                    >
+
+                        <div class="button-overlay"></div>
+
+                        <div class="button-content">
+
+                            <span class="lock">
+                                🔐
+                            </span>
+
+                            <span class="days">
+                                80–71
+                            </span>
+
+                        </div>
+
+                    </button>
+
+
+
+                    <button
+                        class="archive-button"
+                        id="archive-button-3"
+                        onclick="requestPassword(3)"
+                    >
+
+                        <div class="button-overlay"></div>
+
+                        <div class="button-content">
+
+                            <span class="lock">
+                                🔐
+                            </span>
+
+                            <span class="days">
+                                70–61
+                            </span>
+
+                        </div>
+
+                    </button>
+
+
+
+                    <button
+                        class="archive-button"
+                        id="archive-button-4"
+                        onclick="requestPassword(4)"
+                    >
+
+                        <div class="button-overlay"></div>
+
+                        <div class="button-content">
+
+                            <span class="lock">
+                                🔐
+                            </span>
+
+                            <span class="days">
+                                60–51
+                            </span>
+
+                        </div>
+
+                    </button>
+
+
+
+                    <button
+                        class="archive-button"
+                        id="archive-button-5"
+                        onclick="requestPassword(5)"
+                    >
+
+                        <div class="button-overlay"></div>
+
+                        <div class="button-content">
+
+                            <span class="lock">
+                                🔐
+                            </span>
+
+                            <span class="days">
+                                50–41
+                            </span>
+
+                        </div>
+
+                    </button>
+
+
+
+                    <button
+                        class="archive-button"
+                        id="archive-button-6"
+                        onclick="requestPassword(6)"
+                    >
+
+                        <div class="button-overlay"></div>
+
+                        <div class="button-content">
+
+                            <span class="lock">
+                                🔐
+                            </span>
+
+                            <span class="days">
+                                40–31
+                            </span>
+
+                        </div>
+
+                    </button>
+
+
+
+                    <button
+                        class="archive-button"
+                        id="archive-button-7"
+                        onclick="requestPassword(7)"
+                    >
+
+                        <div class="button-overlay"></div>
+
+                        <div class="button-content">
+
+                            <span class="lock">
+                                🔐
+                            </span>
+
+                            <span class="days">
+                                30–21
+                            </span>
+
+                        </div>
+
+                    </button>
+
+
+
+                    <button
+                        class="archive-button"
+                        id="archive-button-8"
+                        onclick="requestPassword(8)"
+                    >
+
+                        <div class="button-overlay"></div>
+
+                        <div class="button-content">
+
+                            <span class="lock">
+                                🔐
+                            </span>
+
+                            <span class="days">
+                                20–11
+                            </span>
+
+                        </div>
+
+                    </button>
+
+
+
+                    <button
+                        class="archive-button"
+                        id="archive-button-9"
+                        onclick="requestPassword(9)"
+                    >
+
+                        <div class="button-overlay"></div>
+
+                        <div class="button-content">
+
+                            <span class="lock">
+                                🔐
+                            </span>
+
+                            <span class="days">
+                                10–1
+                            </span>
+
+                        </div>
+
+                    </button>
+
+
+                    <button
+                        class="archive-button"
+                        id="archive-button-10"
+                        onclick="requestPassword(10)"
+                    >
+
+                        <div class="button-overlay"></div>
+
+                        <div class="button-content">
+
+                            <span class="days">
+                                ♡ 100 reasons why ♡
+                            </span>
+
+                        </div>
+
+                    </button>
+
+                    <button
+                        class="archive-button"
+                        id="archive-button-10"
+                        onclick="requestPassword(11)"
+                    >
+
+                        <div class="button-overlay"></div>
+
+                        <div class="button-content">
+
+                            <span class="days">
+                                What Have I Done?
+                            </span>
+
+                        </div>
+
+                    </button>
+
+
+                </div>
+
+                
+                <button id="music-toggle" onclick="toggleMusic()">
+                    🔇 Music Off
+                </button>
+
+                <audio id="background-music"></audio>
+                
+                
+                <p class="hint">
+                    Happy Birthday!! I LOVE YOU!!! <br>
+                    © 2026 Miles is freaking awesome. All rights reserved.
+                </p>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             ARCHIVE SCREEN
+        ================================================== -->
+
+        <section
+            id="archive-screen"
+            class="screen"
+        >
+
+
+            <button
+                class="back-button"
+                onclick="goHome()"
+            >
+                ← Back
+            </button>
+
+
+            <div class="archive-header">
+
+
+                <p class="eyebrow">
+                    ARCHIVE ENTRY
+                </p>
+
+
+                <h2 id="archive-title">
+                    Archive
+                </h2>
+
+
+                <p id="archive-description">
+                </p>
+
+
+            </div>
+
+
+
+            <div
+                id="archive-content"
+                class="archive-content"
+            >
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =====================================================
+         PASSWORD MODAL
+    ====================================================== -->
+
+    <div
+        id="password-modal"
+        class="modal"
+    >
+
+
+        <div class="modal-box">
+
+
+            <button
+                class="modal-close"
+                onclick="closePasswordModal()"
+                aria-label="Close"
+            >
+                ×
+            </button>
+
+
+            <div class="lock-icon">
+                🔐
+            </div>
+
+
+            <h2 id="password-title">
+                Locked
+            </h2>
+
+
+            <p id="password-prompt">
+                Enter the password to continue.
+            </p>
+
+
+            <input
+                type="password"
+                id="password-input"
+                placeholder="Enter password..."
+                autocomplete="off"
+            >
+
+
+            <button
+                class="unlock-button"
+                onclick="submitPassword()"
+            >
+                Unlock
+            </button>
+
+
+            <p
+                id="password-error"
+                class="password-error"
+            >
+            </p>
+
+
+        </div>
+
+    </div>
+
+    <!-- =====================================================
+         SONGS
+    ====================================================== -->
+
+
+    <audio id="song">
+        <source src="audio/everythingyoudidsteelydan.mp4" type="audio/mp4">
+    </audio>
+
+
+    <!-- =====================================================
+         IMAGE VIEWER
+    ====================================================== -->
+
+    <div
+        id="image-viewer"
+        class="image-viewer"
+        onclick="closeImage()"
+    >
+
+        <img
+            id="large-image"
+            src=""
+            alt="Expanded photo"
+        >
+
+    </div>
+
+
+
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>
