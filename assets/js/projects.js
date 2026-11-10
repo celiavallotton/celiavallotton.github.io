@@ -22,9 +22,9 @@ window.PORTFOLIO_PROJECTS = [
     considerations: ["Roll cage geometry", "Primary and secondary structural members", "Tube notching and joint design", "Driver interface and ergonomics", "Component mounting and packaging", "Structural analysis", "Manufacturing and assembly", "Baja SAE technical requirements"],
     gallery: [
       { label: "Chassis side view", caption: "SolidWorks model of the Baja chassis frame in an angled side view.", alt: "Angled side view of a tubular Baja chassis frame in SolidWorks.", folder: "assets/images/baja/", src: "assets/images/baja/chassis-side-view.webp" },
-      { label: "Chassis side and top views", caption: "Add orthographic views when ready to share.", alt: "Placeholder for Baja SAE chassis side and top views", folder: "assets/images/baja/" },
-      { label: "Tube joint detail", caption: "Add a tube intersection or notching detail.", alt: "Placeholder for a Baja SAE chassis tube joint detail", folder: "assets/images/baja/" },
-      { label: "Analysis or fabrication", caption: "Add an FEA study or physical build photograph when available.", alt: "Placeholder for Baja SAE analysis or fabrication documentation", folder: "assets/images/baja/" }
+      { label: "Chassis fixture CAD", caption: "SolidWorks assembly showing the chassis welding fixtures.", alt: "CAD model of welding fixtures arranged around a tubular Baja chassis.", folder: "assets/images/baja/", src: "assets/images/baja/full-fixtures-CAD.webp" },
+      { label: "Ergonomics prototype", caption: "Full-scale PVC prototype used to assess seating and driver access.", alt: "Full-scale PVC chassis ergonomics prototype with a plywood floor panel.", folder: "assets/images/baja/", src: "assets/images/baja/plywood-ergo.webp" },
+      { label: "Roll hoop weld fixture", caption: "Fixture prepared to hold the roll hoop during fabrication.", alt: "Roll hoop positioned in a wooden welding fixture in the workshop.", folder: "assets/images/baja/", src: "assets/images/baja/roll-hoop-fixturing.webp" }
     ]
   },
   {
@@ -44,10 +44,10 @@ window.PORTFOLIO_PROJECTS = [
     tools: ["3D printing", "Modular 80/20 aluminum framing", "Rapid prototyping", "Mechanical fabrication and assembly", "Ocean testing"],
     considerations: ["Translating wave motion into prototype movement", "Mechanical layout and assembly", "Outdoor ocean testing", "Working as a three-person engineering team"],
     gallery: [
-      { label: "Prototype overview", caption: "Add an overall photograph of the generator prototype.", alt: "Placeholder for the wave energy generator prototype", folder: "assets/images/wave-energy/" },
-      { label: "Mechanical design", caption: "Add a drawing or CAD model if available.", alt: "Placeholder for wave energy generator design documentation", folder: "assets/images/wave-energy/" },
-      { label: "Ocean test", caption: "Add a project photograph from the ocean test.", alt: "Placeholder for ocean testing documentation", folder: "assets/images/wave-energy/" },
-      { label: "Electrical demonstration", caption: "Add a photograph of the two illuminated LEDs.", alt: "Placeholder for the wave generator LED demonstration", folder: "assets/images/wave-energy/" }
+      { label: "Prototype overview", caption: "Assembled prototype used for the ocean wave energy demonstration.", alt: "Assembled cylindrical wave energy prototype with its float and support frame.", folder: "assets/images/wave-energy/", src: "assets/images/wave-energy/htg-full-assy.webp" },
+      { label: "Internal mechanism", caption: "The internal mechanical arrangement of the prototype.", alt: "Internal view of the wave energy generator showing its mechanical components.", folder: "assets/images/wave-energy/", src: "assets/images/wave-energy/htg-inside.webp" },
+      { label: "Ocean test", caption: "Prototype being tested in moving water.", alt: "Wave energy prototype held in ocean water during a field test.", folder: "assets/images/wave-energy/", src: "assets/images/wave-energy/htg-working-in-ocean.webp" },
+      { label: "Prototype base", caption: "The welded support base used for the generator prototype.", alt: "Round welded frame supporting a vertical cylindrical wave energy prototype.", folder: "assets/images/wave-energy/", src: "assets/images/wave-energy/htg-welded-base.webp" }
     ]
   },
   {
@@ -67,8 +67,8 @@ window.PORTFOLIO_PROJECTS = [
     tools: ["Table saws", "Chop saws", "Belt sanders", "Drill presses", "Branders", "Finishing products", "Reclaimed wood"],
     considerations: ["Material properties", "Precision measurement", "Fabrication and assembly", "Design for practical production", "Problem-solving with physical materials"],
     gallery: [
-      { label: "Project or product", caption: "Add a photograph of a project or product you can share.", alt: "Placeholder for a Sonoma Millworks product photograph", folder: "assets/images/sonoma-millworks/" },
-      { label: "Fabrication detail", caption: "Add a detail showing materials or fabrication work.", alt: "Placeholder for a Sonoma Millworks fabrication detail", folder: "assets/images/sonoma-millworks/" }
+      { label: "VinoPlank Sprig Vases", caption: "Sprig vases made from reclaimed wood.", alt: "Reclaimed wood sprig vases displayed with fresh flowers.", folder: "assets/images/sonoma-millworks/", src: "assets/images/sonoma-millworks/vino-plank-sprig-vases.webp" },
+      { label: "Showroom display", caption: "Custom wood products arranged in the Sonoma Millworks showroom.", alt: "Custom wood products displayed on tables and shelves in a showroom.", folder: "assets/images/sonoma-millworks/", src: "assets/images/sonoma-millworks/smw-showroom.webp" }
     ]
   },
   {
@@ -88,10 +88,9 @@ window.PORTFOLIO_PROJECTS = [
     tools: ["Mechanical design", "Fabrication", "Mechanical assembly", "Material testing — add method and results when documented"],
     considerations: ["Machine structure and load path", "Specimen mounting", "Fabrication and assembly", "Testing setup and documentation"],
     gallery: [
-      { label: "Machine CAD model", caption: "Add an overall CAD assembly or engineering drawing.", alt: "Placeholder for tensile tester CAD model", folder: "assets/images/tensile-tester/" },
-      { label: "Fabrication", caption: "Add photographs of fabrication and assembly.", alt: "Placeholder for tensile tester fabrication photographs", folder: "assets/images/tensile-tester/" },
-      { label: "Testing setup", caption: "Add a photograph of the specimen and testing setup.", alt: "Placeholder for tensile tester setup", folder: "assets/images/tensile-tester/" },
-      { label: "Example results", caption: "Add a representative result only after the method and values are verified.", alt: "Placeholder for tensile test results", folder: "assets/images/tensile-tester/" }
+      { label: "Machine CAD model", caption: "SolidWorks assembly of the tensile tester.", alt: "CAD assembly of a vertical tensile tester with its frame, grips, and drive components.", folder: "assets/images/tensile-tester/", src: "assets/images/tensile-tester/TT-full-assembly-CAD.webp" },
+      { label: "FEA study", caption: "Finite element analysis view from the machine design process.", alt: "FEA visualization of stress distribution in a tensile tester component.", folder: "assets/images/tensile-tester/", src: "assets/images/tensile-tester/TT-FEA-2.webp" },
+      { label: "Component layout", caption: "Components arranged for inspection during machine development.", alt: "Tensile tester components laid out on a work surface for inspection.", folder: "assets/images/tensile-tester/", src: "assets/images/tensile-tester/TT-all-components.webp" }
     ]
   },
   {
@@ -146,7 +145,30 @@ window.PORTFOLIO_SKILLS = [
 ];
 
 /* Independent woodworking builds belong here, not under Sonoma Millworks. */
-window.PERSONAL_WOODWORKING_PROJECTS = [];
+window.PERSONAL_WOODWORKING_PROJECTS = [
+  { title: "Birdhouse", summary: "A small wooden birdhouse with a layered roof and slatted side details.", src: "assets/images/personal-woodworking/birdbox-2.webp", alt: "Finished wooden birdhouse with a layered roof, photographed on a workshop bench." },
+  { title: "Live-edge coffee table", summary: "A low coffee table built around a naturally shaped wood slab.", src: "assets/images/personal-woodworking/coffee-table-11.webp", alt: "Finished live-edge coffee table with a broad natural wood top." },
+  { title: "Wooden floor lamp", summary: "A tall wooden lamp with a warm finish and a perforated front panel.", src: "assets/images/personal-woodworking/lamp-1.webp", alt: "Tall finished wooden floor lamp with a patterned front panel." }
+];
 
 /* Ceramics work is documented separately from workshop-assistant experience. */
 window.CERAMICS_PROJECTS = [];
+
+window.COFFEE_BUSINESS_PROJECTS = [
+  { title: "Coffee kiosk CAD concept", summary: "A CAD concept for a portable service kiosk used by Cequin Coffee Company.", src: "assets/images/coffee-business/cq-box-cad.webp", alt: "CAD view of the coffee kiosk enclosure concept." },
+  { title: "Kiosk fabrication", summary: "The kiosk enclosure taking shape in the workshop.", src: "assets/images/coffee-business/cq-box-in-shop.webp", alt: "Wooden coffee kiosk enclosure under construction in the workshop." },
+  { title: "Completed coffee kiosk", summary: "The finished kiosk ready for use at events.", src: "assets/images/coffee-business/cq-box-done.webp", alt: "Completed wooden coffee kiosk standing outdoors." }
+];
+
+window.MACHINING_PROJECTS = [
+  { title: "CNC milling", summary: "Operating a CNC mill during a machining project.", src: "assets/images/machining/on-cnc.webp", alt: "Student operating a CNC milling machine." },
+  { title: "Drilled plate", summary: "A machined plate with a repeated hole pattern.", src: "assets/images/machining/manual-plates-holes.webp", alt: "Machined metal plate with a pattern of drilled holes." },
+  { title: "Tapping operation", summary: "A close view of a tapping setup at the machine.", src: "assets/images/machining/tapping.webp", alt: "Tapping tool positioned over a workpiece in a machine setup." }
+];
+
+window.SMALL_ENGINEERING_PROJECTS = [
+  { title: "Egg-drop device", summary: "An assembled mechanical frame developed for an egg-drop challenge.", src: "assets/images/small-eng-side-projects/eggdrop-assembled.webp", alt: "Assembled frame-based device for an egg-drop challenge." },
+  { title: "Gear mechanism", summary: "A small mechanism showing a set of meshing gears and its support structure.", src: "assets/images/small-eng-side-projects/gears.webp", alt: "Compact gear mechanism mounted on a perforated support frame." },
+  { title: "Grabber mechanism", summary: "A prototype grabber shown in its open position.", src: "assets/images/small-eng-side-projects/grabber-open.webp", alt: "Prototype grabber mechanism extended on a work surface." },
+  { title: "Hydraulic prototype", summary: "A small hydraulic mechanism built as a hands-on engineering project.", src: "assets/images/small-eng-side-projects/hydraulic-1.webp", alt: "Small hydraulic prototype made from wood, tubing, and mechanical components." }
+];

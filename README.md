@@ -15,7 +15,7 @@ Then open <http://localhost:8000>. Press `Ctrl+C` in PowerShell to stop the serv
 ## Project layout
 
 ```text
-index.html                 Home, About, Projects, Woodworking, Ceramics, Skills, Experience, Resume, Contact
+index.html                 Home, About, Projects, Woodworking, Ceramics, Coffee Business, Machining, Side Projects, Skills, Experience, Resume, Contact
 project.html               Reusable individual project detail page
 assets/
   css/site.css             Visual system, responsive layouts, and print styles
@@ -41,13 +41,17 @@ Project cards are created from this data, and `project.html?id=your-project-id` 
 
 Images below `assets/images/` must be `.webp` files with no embedded EXIF, XMP, or ICC profile chunks. This removes common camera details such as GPS location, device data, timestamps, and author fields. It does not remove information that is visible in the image itself.
 
-The repository includes an automated policy check at `.github/workflows/image-policy.yml`. It runs whenever changes are pushed or proposed for `main`, and rejects non-WebP images or files with the blocked metadata chunks. GitHub branch protection can make this check required before a pull request is merged; it cannot prevent someone from committing a file locally.
+Original `.JPG`, `.JPEG`, `.PNG`, and `.HEIC` files are kept locally under `.image-sources/`, which is ignored by Git. Only the converted WebP copies are included in the published image folders. `.MOV` and `.MP4` videos stay in their folders on your computer and are ignored by Git and the image check.
+
+The repository includes an automated policy check at `.github/workflows/image-policy.yml`. It runs whenever changes are pushed or proposed for `main`, and rejects non-WebP images or files with the blocked metadata chunks. `.MOV` and `.MP4` video files are ignored by the image check. GitHub branch protection can make this check required before a pull request is merged; it cannot prevent someone from committing a file locally.
 
 To prepare a photo with ImageMagick, make a published copy rather than overwriting your original:
 
 ```powershell
-magick "original-photo.jpg" -auto-orient -strip -quality 82 "assets/images/baja/chassis-overview.webp"
+magick "original-photo.jpg" -auto-orient -resize "2000x2000>" -strip -quality 82 "assets/images/baja/chassis-overview.webp"
 ```
+
+If PowerShell does not recognize `magick`, call the executable directly at `C:\Program Files\ImageMagick-7.1.2-Q16-HDRI\magick.exe` on this computer.
 
 Run the same audit locally when Node.js is installed:
 
@@ -86,7 +90,7 @@ Use this example to add a photo to the Baja chassis project:
 
 Use the matching folder for other projects: for example, `assets/images/ceramics/` for ceramics or `assets/images/personal-woodworking/` for personal woodworking. Move gallery entries in the array to change their order; add or remove entries to change the number of slots.
 
-Available folders: `profile`, `baja`, `wave-energy`, `tensile-tester`, `sonoma-millworks`, `personal-woodworking`, `ceramics`, `rube-goldberg`, and `general`. No stock project photos are included. Before publishing classroom photos, confirm that publication is appropriate and avoid identifiable student images without permission.
+Available folders: `profile`, `baja`, `wave-energy`, `tensile-tester`, `sonoma-millworks`, `personal-woodworking`, `ceramics`, `rube-goldberg`, `coffee-business`, `machining`, `small-eng-side-projects`, and `general`. No stock project photos are included. Before publishing classroom photos, confirm that publication is appropriate and avoid identifiable student images without permission.
 
 The About section also has a portrait slot. Add a portrait to `assets/images/profile/`, then replace the inline illustration in `index.html` with an `<img>` element and descriptive `alt` text.
 

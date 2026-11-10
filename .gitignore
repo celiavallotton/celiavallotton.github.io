@@ -1,1 +1,5 @@
 .image-sources/
+assets/images/**/*.MOV
+assets/images/**/*.mov
+assets/images/**/*.MP4
+assets/images/**/*.mp4

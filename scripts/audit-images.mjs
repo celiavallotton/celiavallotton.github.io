@@ -6,11 +6,12 @@
  * camera and author metadata. It does not inspect visible information in pixels.
  */
 import { readdir, readFile } from "node:fs/promises";
-import { join, relative } from "node:path";
+import { extname, join, relative } from "node:path";
 
 const imagesRoot = join(process.cwd(), "assets", "images");
 const allowedWebPChunks = new Set(["VP8 ", "VP8L", "VP8X", "ALPH", "ANIM", "ANMF"]);
 const metadataChunks = new Set(["EXIF", "XMP ", "ICCP"]);
+const videoExtensions = new Set([".mov", ".mp4"]);
 
 async function walk(directory) {
   const entries = await readdir(directory, { withFileTypes: true });
@@ -38,7 +39,9 @@ function getWebPChunks(bytes) {
   return offset === bytes.length ? chunks : null;
 }
 
-const imageFiles = (await walk(imagesRoot)).filter((file) => !file.endsWith(".gitkeep"));
+const contentFiles = (await walk(imagesRoot)).filter((file) => !file.endsWith(".gitkeep"));
+const videoFiles = contentFiles.filter((file) => videoExtensions.has(extname(file).toLowerCase()));
+const imageFiles = contentFiles.filter((file) => !videoExtensions.has(extname(file).toLowerCase()));
 const problems = [];
 
 for (const file of imageFiles) {
@@ -67,4 +70,4 @@ if (problems.length) {
   process.exit(1);
 }
 
-console.log(`Image policy check passed: ${imageFiles.length} publishable WebP image(s), with no EXIF, XMP, or ICCP chunks.`);
+console.log(`Image policy check passed: ${imageFiles.length} publishable WebP image(s), with no EXIF, XMP, or ICCP chunks. Ignored ${videoFiles.length} video file(s).`);

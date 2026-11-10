@@ -5,7 +5,9 @@
   const grid = document.getElementById("project-grid");
   const filters = document.getElementById("project-filters");
 
-  function cardArt() {
+  function cardArt(project) {
+    const featuredImage = project.gallery?.find((image) => image.src);
+    if (featuredImage) return `<div class="project-art"><img src="${escapeHtml(featuredImage.src)}" alt="" aria-hidden="true" loading="lazy"><span class="project-art-note">SELECTED PROJECT IMAGE</span></div>`;
     return '<div class="project-art" aria-hidden="true"><svg class="art-motif" viewBox="0 0 260 160"><path d="M30 128 59 37l42-18 63 21 45 87H30Z"/><path d="m59 37 70 33 35-30M101 19l28 51 63-30M59 37l9 63 61 12 89-8M30 128l38-28m61 12-4-42m4 42 78 16m-78-16 24-41"/><path class="light" d="M30 128h179m-141-28 33-27m29 56 43-43"/><circle class="accent" cx="59" cy="37" r="4"/><circle class="accent" cx="101" cy="19" r="4"/><circle class="accent" cx="164" cy="40" r="4"/><circle class="accent" cx="209" cy="127" r="4"/><line class="accent" x1="209" y1="127" x2="238" y2="145"/></svg><span class="project-art-note">Illustrative graphic · add project image</span></div>';
   }
 
@@ -15,7 +17,7 @@
     grid.innerHTML = visibleProjects.map((project, index) => `
       <article class="project-card">
         <a class="project-card-link" href="project.html?id=${encodeURIComponent(project.id)}" aria-label="View ${escapeHtml(project.title)} project details">
-          ${cardArt()}
+          ${cardArt(project)}
           <div class="project-card-body">
             <div class="project-card-top"><span class="project-category">${escapeHtml(project.category)}</span><span class="project-status">${escapeHtml(project.status)}</span></div>
             <h3>${escapeHtml(project.shortTitle || project.title)}</h3>
@@ -72,6 +74,21 @@
   } else if (ceramicsGrid) {
     ceramicsGrid.innerHTML = `<article class="woodworking-empty ceramics-empty"><div class="woodworking-art woodworking-art-empty ceramics-art"><svg viewBox="0 0 420 230" aria-hidden="true"><path d="M158 44c4 20-3 31-17 45-12 13-16 27-12 51 5 32 28 49 81 49s76-17 81-49c4-24 0-38-12-51-14-14-21-25-17-45"/><path d="M158 44c34 11 70 11 104 0M131 108c52 16 106 16 158 0m-163 36c56 16 112 16 168 0M210 74v108m-53-83c22 12 41 17 53 17s31-5 53-17"/><path d="M184 187c13 6 39 6 52 0"/></svg><span class="woodworking-art-label">CERAMICS · PHOTO SLOT</span></div><div class="woodworking-empty-copy"><p class="eyebrow">CERAMICS COLLECTION <span class="eyebrow-rule"></span></p><h3>A space for ceramics work.</h3><p>Add pieces with a short description, process or technique notes, and photographs. This collection is for ceramics work; Sonoma Art School workshop assistance stays under Experience.</p><p class="small-note">Entries and image paths are managed in <code>assets/js/projects.js</code> and <code>assets/images/ceramics/</code>.</p></div></article>`;
   }
+
+  function renderCollection(gridId, projects) {
+    const root = document.getElementById(gridId);
+    if (!root) return;
+    root.innerHTML = projects.map((project) => `
+      <article class="collection-card">
+        <figure><img src="${escapeHtml(project.src)}" alt="${escapeHtml(project.alt)}" loading="lazy">
+          <figcaption><h3>${escapeHtml(project.title)}</h3><p>${escapeHtml(project.summary)}</p></figcaption>
+        </figure>
+      </article>`).join("");
+  }
+
+  renderCollection("coffee-business-grid", window.COFFEE_BUSINESS_PROJECTS || []);
+  renderCollection("machining-grid", window.MACHINING_PROJECTS || []);
+  renderCollection("side-projects-grid", window.SMALL_ENGINEERING_PROJECTS || []);
 
   const menuButton = document.querySelector(".menu-toggle");
   const nav = document.getElementById("primary-nav");
