@@ -43,6 +43,36 @@
     skillsRoot.innerHTML = window.PORTFOLIO_SKILLS.map((group) => `<section class="skill-group"><h3>${escapeHtml(group.title)}</h3><ul>${group.skills.map(([name, level]) => `<li><span>${escapeHtml(name)}</span><span class="skill-level">${escapeHtml(level)}</span></li>`).join("")}</ul></section>`).join("");
   }
 
+  const woodworkingGrid = document.getElementById("woodworking-grid");
+  const woodworkingProjects = window.PERSONAL_WOODWORKING_PROJECTS || [];
+  if (woodworkingGrid && woodworkingProjects.length) {
+    woodworkingGrid.innerHTML = woodworkingProjects.map((project, index) => `
+      <article class="woodworking-card">
+        <div class="woodworking-art">
+          ${project.src ? `<img src="${escapeHtml(project.src)}" alt="${escapeHtml(project.alt || project.title)}" loading="lazy">` : '<svg viewBox="0 0 420 230" aria-hidden="true"><path d="M54 167 106 58l102 31 60-43 104 61-41 75-108-31-69 34Z"/><path d="m106 58 55 127m47-96 45 106m15-149-11 118m115-57-45 88M65 145l256 27M84 107l257 42"/><circle cx="106" cy="58" r="3"/><circle cx="268" cy="46" r="3"/></svg>'}
+          <span class="woodworking-art-label">PERSONAL BUILD · ${String(index + 1).padStart(2, "0")}</span>
+        </div>
+        <div class="woodworking-card-copy"><h3>${escapeHtml(project.title)}</h3><p>${escapeHtml(project.summary)}</p>${project.materials ? `<span class="woodworking-materials">Materials · ${escapeHtml(project.materials)}</span>` : ""}</div>
+      </article>`).join("");
+  } else if (woodworkingGrid) {
+    woodworkingGrid.innerHTML = `<article class="woodworking-empty"><div class="woodworking-art woodworking-art-empty"><svg viewBox="0 0 420 230" aria-hidden="true"><path d="m62 163 48-96 116 31-44 101Zm116 36 45-101 123 35-42 83ZM94 57l116 31 15-34-115-31Zm137 32 123 35 15-35-125-34Z"/><path d="m110 67 72 19m-85-36 70 18m64 32 83 23m-69-44 82 22M81 125l111 29m52-35 94 27"/><path d="M110 67 62 163m116 36 45-101m-12-10 123 35m-28-69-11 35"/></svg><span class="woodworking-art-label">PERSONAL WOODWORKING · IMAGE SLOT</span></div><div class="woodworking-empty-copy"><p class="eyebrow">INDEPENDENT BUILDS <span class="eyebrow-rule"></span></p><h3>A place for personal projects.</h3><p>This collection is separate from my Sonoma Millworks experience. Add personal builds here with a short description, materials, and project photos when ready.</p><p class="small-note">Project entries and image paths are managed in <code>assets/js/projects.js</code> and <code>assets/images/personal-woodworking/</code>.</p></div></article>`;
+  }
+
+  const ceramicsGrid = document.getElementById("ceramics-grid");
+  const ceramicsProjects = window.CERAMICS_PROJECTS || [];
+  if (ceramicsGrid && ceramicsProjects.length) {
+    ceramicsGrid.innerHTML = ceramicsProjects.map((project, index) => `
+      <article class="woodworking-card ceramics-card">
+        <div class="woodworking-art ceramics-art">
+          ${project.src ? `<img src="${escapeHtml(project.src)}" alt="${escapeHtml(project.alt || project.title)}" loading="lazy">` : '<svg viewBox="0 0 420 230" aria-hidden="true"><path d="M158 44c4 20-3 31-17 45-12 13-16 27-12 51 5 32 28 49 81 49s76-17 81-49c4-24 0-38-12-51-14-14-21-25-17-45"/><path d="M158 44c34 11 70 11 104 0M131 108c52 16 106 16 158 0m-163 36c56 16 112 16 168 0M210 74v108m-53-83c22 12 41 17 53 17s31-5 53-17"/><path d="M184 187c13 6 39 6 52 0"/></svg>'}
+          <span class="woodworking-art-label">CERAMICS · ${String(index + 1).padStart(2, "0")}${project.src ? "" : " · ADD PHOTO"}</span>
+        </div>
+        <div class="woodworking-card-copy"><h3>${escapeHtml(project.title)}</h3><p>${escapeHtml(project.summary)}</p>${project.technique ? `<span class="woodworking-materials">Technique / materials · ${escapeHtml(project.technique)}</span>` : ""}</div>
+      </article>`).join("");
+  } else if (ceramicsGrid) {
+    ceramicsGrid.innerHTML = `<article class="woodworking-empty ceramics-empty"><div class="woodworking-art woodworking-art-empty ceramics-art"><svg viewBox="0 0 420 230" aria-hidden="true"><path d="M158 44c4 20-3 31-17 45-12 13-16 27-12 51 5 32 28 49 81 49s76-17 81-49c4-24 0-38-12-51-14-14-21-25-17-45"/><path d="M158 44c34 11 70 11 104 0M131 108c52 16 106 16 158 0m-163 36c56 16 112 16 168 0M210 74v108m-53-83c22 12 41 17 53 17s31-5 53-17"/><path d="M184 187c13 6 39 6 52 0"/></svg><span class="woodworking-art-label">CERAMICS · PHOTO SLOT</span></div><div class="woodworking-empty-copy"><p class="eyebrow">CERAMICS COLLECTION <span class="eyebrow-rule"></span></p><h3>A space for ceramics work.</h3><p>Add pieces with a short description, process or technique notes, and photographs. This collection is for ceramics work; Sonoma Art School workshop assistance stays under Experience.</p><p class="small-note">Entries and image paths are managed in <code>assets/js/projects.js</code> and <code>assets/images/ceramics/</code>.</p></div></article>`;
+  }
+
   const menuButton = document.querySelector(".menu-toggle");
   const nav = document.getElementById("primary-nav");
   if (menuButton && nav) {
@@ -87,7 +117,7 @@
       resumeLink.removeAttribute("tabindex");
       resumeLink.classList.remove("is-disabled");
       const label = resumeLink.querySelector(".resume-button-label");
-      if (label) label.textContent = "Download";
+      if (label) label.textContent = "Download PDF";
     }).catch(() => {});
   }
 })();

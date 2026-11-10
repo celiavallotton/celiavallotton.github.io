@@ -1,7 +1,7 @@
 /*
  * Portfolio content lives here so projects and skills can be edited without
  * changing the page layout. Gallery images are optional: add a relative `src`
- * such as "assets/images/baja/chassis-side-view.jpg" to replace a placeholder.
+ * such as "assets/images/baja/chassis-side-view.webp" to replace a placeholder.
  */
 window.PORTFOLIO_PROJECTS = [
   {
@@ -12,16 +12,16 @@ window.PORTFOLIO_PROJECTS = [
     tags: ["Mechanical Design", "CAD / FEA", "Manufacturing", "Product Development"],
     status: "In Progress",
     cardSummary: "Chassis and roll cage development for the SRJC Baja SAE vehicle, balancing structural design, driver needs, packaging, and fabrication constraints.",
-    intro: "As Chassis Lead / Chassis Manager for the Santa Rosa Junior College Baja SAE team, I lead chassis design and development. The work brings together structural geometry, driver safety and ergonomics, component packaging, manufacturing, and competition requirements.",
-    what: "Develop a tubular vehicle chassis and roll cage that can integrate with the team's vehicle systems and be designed with Baja SAE technical requirements in mind. This is ongoing design work; no competition, technical inspection, or vehicle testing outcome is claimed here.",
-    how: "I use SolidWorks to develop the chassis, roll cage, and individual tubular members, including tube intersections and notching geometry. I coordinate the chassis design with other engineering subteams and explore FEA to assess loading and structural behavior. Current design work also considers pedal-box and driver-interface concepts, firewall geometry, mounting locations, body-panel attachment, reinforcement, and gusset placement.",
+    intro: "Since August 2025, I have served as Chassis Lead for the Santa Rosa Junior College Baja SAE team. The work brings together structural geometry, driver safety and ergonomics, component packaging, manufacturing, and competition requirements.",
+    what: "Develop a tubular vehicle chassis and roll cage intended to meet Baja SAE technical requirements while integrating with the team's vehicle systems. Chassis design and vehicle development are ongoing; no competition result or technical inspection outcome is claimed here.",
+    how: "I developed the chassis and roll cage in SolidWorks and conducted SolidWorks Simulation FEA to evaluate loading and stress concentrations from predicted impacts. I designed and fabricated chassis welding fixtures and developed tube-notching processes. I also led a collaborative team of SRJC Society of Women Engineers members through the design and fabrication of a full-scale PVC chassis prototype to evaluate seating geometry, pedal positioning, driver ergonomics, and egress. Current design work also considers firewall geometry, mounting locations, body-panel attachment, reinforcement, and gusset placement.",
     why: "A chassis has to satisfy competing needs at once: structural requirements, driver safety and ergonomics, weight, packaging, accessibility, manufacturability, and competition rules. Joint geometry and member placement affect both the design and the practical work of cutting, fitting, and assembling 4130 chromoly tubing.",
-    results: "Chassis design and development are in progress. SolidWorks models and structural-analysis exploration support iteration; final fabrication, validation, and competition outcomes are not represented as complete.",
-    contribution: "I lead chassis design and development, model the chassis and roll cage in SolidWorks, develop tubular members and joint geometry, coordinate with subteams, and work through driver-interface and manufacturing considerations. Team-wide vehicle outcomes remain shared work.",
-    tools: ["SolidWorks", "4130 chromoly steel tubing", "Tubular member and joint design", "FEA exploration"],
+    results: "The team designed and fabricated a full-scale PVC chassis prototype to evaluate driver ergonomics. Chassis development remains in progress; this prototype does not represent final vehicle fabrication, competition, or technical inspection.",
+    contribution: "I led chassis subsystem design, designed and fabricated welding fixtures, developed tube-notching processes, conducted SolidWorks Simulation FEA, and led a collaborative team through the PVC chassis prototype work. Chassis design is coordinated with other vehicle subteams.",
+    tools: ["SolidWorks", "SolidWorks Simulation FEA", "4130 chromoly steel tubing", "PVC chassis prototype", "Welding fixtures", "Tube notching"],
     considerations: ["Roll cage geometry", "Primary and secondary structural members", "Tube notching and joint design", "Driver interface and ergonomics", "Component mounting and packaging", "Structural analysis", "Manufacturing and assembly", "Baja SAE technical requirements"],
     gallery: [
-      { label: "Full chassis CAD assembly", caption: "Add a current SolidWorks chassis assembly screenshot.", alt: "Placeholder for the SRJC Baja SAE chassis CAD assembly", folder: "assets/images/baja/" },
+      { label: "Chassis side view", caption: "SolidWorks model of the Baja chassis frame in an angled side view.", alt: "Angled side view of a tubular Baja chassis frame in SolidWorks.", folder: "assets/images/baja/", src: "assets/images/baja/chassis-side-view.webp" },
       { label: "Chassis side and top views", caption: "Add orthographic views when ready to share.", alt: "Placeholder for Baja SAE chassis side and top views", folder: "assets/images/baja/" },
       { label: "Tube joint detail", caption: "Add a tube intersection or notching detail.", alt: "Placeholder for a Baja SAE chassis tube joint detail", folder: "assets/images/baja/" },
       { label: "Analysis or fabrication", caption: "Add an FEA study or physical build photograph when available.", alt: "Placeholder for Baja SAE analysis or fabrication documentation", folder: "assets/images/baja/" }
@@ -34,14 +34,14 @@ window.PORTFOLIO_PROJECTS = [
     category: "Renewable Energy",
     tags: ["Renewable Energy", "Mechanical Design", "Manufacturing"],
     status: "Prototype",
-    cardSummary: "A three-person SkillsUSA engineering project to design, fabricate, and test a small wave-powered generator prototype.",
-    intro: "During my senior year of high school, I worked with a three-person SkillsUSA team to develop a small ocean wave energy generator. The physical prototype was tested in an ocean environment and generated enough electrical output to illuminate two LEDs.",
+    cardSummary: "A three-person SkillsUSA project that earned third place at the California State Conference and demonstrated a wave-powered prototype in ocean testing.",
+    intro: "From August 2024 to June 2025, I worked with a three-person SkillsUSA team to develop a small ocean wave energy generator. The project earned third place at the SkillsUSA California State Conference. The prototype was tested in an ocean environment and generated enough electrical output to illuminate two LEDs.",
     what: "Create a small physical prototype intended to harness ocean wave motion and demonstrate conversion of that motion into electrical output.",
-    how: "My primary responsibility was the mechanical design, fabrication, and assembly of the prototype. The team developed the device collaboratively and tested the assembled prototype in an ocean environment.",
+    how: "My primary responsibility was mechanical design, fabrication, and assembly. The team sourced materials with environmental impact, marine exposure, watertight solutions, and cost in mind. We used rapid prototyping, including 3D printing and modular 80/20 aluminum framing, to support assembly and iterative design changes before ocean testing.",
     why: "The project needed to move beyond a concept and work as a physical system in a wave environment. Building and assembling a prototype made it possible to try the mechanical approach under real conditions.",
-    results: "The prototype was tested in an ocean environment and generated enough electrical output to illuminate two LEDs. No power, efficiency, or other measured performance values are available to report.",
+    results: "The prototype was tested in an ocean environment and generated enough electrical output to illuminate two LEDs. The team earned third place at the SkillsUSA California State Conference. No power, efficiency, or other measured performance values are available to report.",
     contribution: "My primary contribution was mechanical design, fabrication, and assembly. This was a three-person team project; the outcome reflects collaborative work.",
-    tools: ["Mechanical design", "Fabrication", "Mechanical assembly", "Physical prototype testing"],
+    tools: ["3D printing", "Modular 80/20 aluminum framing", "Rapid prototyping", "Mechanical fabrication and assembly", "Ocean testing"],
     considerations: ["Translating wave motion into prototype movement", "Mechanical layout and assembly", "Outdoor ocean testing", "Working as a three-person engineering team"],
     gallery: [
       { label: "Prototype overview", caption: "Add an overall photograph of the generator prototype.", alt: "Placeholder for the wave energy generator prototype", folder: "assets/images/wave-energy/" },
@@ -58,13 +58,13 @@ window.PORTFOLIO_PROJECTS = [
     tags: ["Manufacturing", "Product Development"],
     status: "Work Experience",
     cardSummary: "Hands-on woodworking and manufacturing experience with physical materials, fabrication, framing, and product development.",
-    intro: "My work at Sonoma Millworks has given me hands-on experience in woodworking, fabrication, framing, product development, and working with physical materials. The experience connects design decisions with making and assembly.",
-    what: "Work in a woodworking and manufacturing environment, contributing to hands-on fabrication and product development. Specific products and project examples can be added when confirmed and ready to share.",
-    how: "The experience involves working with physical materials and participating in woodworking, fabrication, framing, and assembly. Specific machinery, tools, and processes are left open until I can document them accurately.",
+    intro: "Since June 2025, I have worked part-time at Sonoma Millworks, assisting with fabrication and finishing custom wood products, product development, showroom work, and preparation for retail and wholesale distribution.",
+    what: "Support the fabrication and finishing of custom wood products. I also contributed to product development and production of VinoPlank Sprig Vases made from reclaimed wood.",
+    how: "My work has included using table saws, chop saws, belt sanders, drill presses, branders, and finishing products. I have also supported showroom organization, product display, and preparation of custom products for retail and wholesale distribution.",
     why: "A design has to account for materials, measurement, assembly, and the steps required to make a physical product. Hands-on work helps me consider those factors while developing engineering concepts.",
-    results: "This is ongoing work experience. Specific product outcomes and production details are not listed here.",
-    contribution: "My experience includes woodworking, fabrication, product development, framing, and working with physical materials. Add project-specific contributions and product examples as they are confirmed.",
-    tools: ["Woodworking and fabrication processes", "Physical materials", "Measurement and assembly — add specific details when confirmed"],
+    results: "Ongoing part-time experience in custom wood-product fabrication, finishing, and product development.",
+    contribution: "I assist with fabrication and finishing, contributed to production of VinoPlank Sprig Vases using reclaimed wood, and support showroom and product-preparation work.",
+    tools: ["Table saws", "Chop saws", "Belt sanders", "Drill presses", "Branders", "Finishing products", "Reclaimed wood"],
     considerations: ["Material properties", "Precision measurement", "Fabrication and assembly", "Design for practical production", "Problem-solving with physical materials"],
     gallery: [
       { label: "Project or product", caption: "Add a photograph of a project or product you can share.", alt: "Placeholder for a Sonoma Millworks product photograph", folder: "assets/images/sonoma-millworks/" },
@@ -121,14 +121,14 @@ window.PORTFOLIO_PROJECTS = [
     shortTitle: "Rube Goldberg outreach",
     category: "Engineering Outreach",
     tags: ["Engineering Outreach", "Product Development"],
-    status: "Completed",
-    cardSummary: "A two-day elementary school lesson introducing simple machines through collaborative, student-built Rube Goldberg machines.",
-    intro: "Working with a classmate, I have been helping reintroduce Rube Goldberg projects in local schools. We connected with previous mentors and a local school and helped organize a two-day lesson for a fourth-grade class.",
+    status: "In Progress",
+    cardSummary: "An ongoing local STEM outreach effort that has delivered a two-day Rube Goldberg lesson for a fourth-grade class.",
+    intro: "Since November 2025, I have collaborated with a local school to help reintroduce hands-on Rube Goldberg engineering projects in the community. With a classmate, I co-developed and carried out a two-day instructional program for a fourth-grade class.",
     what: "Plan an engaging introduction to simple machines that gives elementary students a chance to build their own Rube Goldberg machines.",
-    how: "I worked collaboratively with a classmate, contacted previous mentors and a local school, and helped organize the two-day lesson. Students were introduced to simple machines and had an opportunity to build their own machines.",
+    how: "I worked with a classmate and the local school to co-develop and carry out the two-day lesson. It covered simple machines and gave students instruction and time to build their own Rube Goldberg machines.",
     why: "A chain-reaction project gives students a hands-on way to explore mechanical interactions, sequencing, and creative problem-solving while communicating engineering ideas in an accessible way.",
-    results: "A two-day lesson was organized with a fourth-grade class. No student identities or individual project outcomes are included here.",
-    contribution: "I helped contact mentors and a local school and organize the lesson with a classmate. The outreach was collaborative work.",
+    results: "A two-day instructional program was delivered to a fourth-grade class. The broader community outreach effort is ongoing. No student identities or individual project outcomes are included here.",
+    contribution: "I co-developed and carried out the two-day program with a classmate and collaborated with the local school to reintroduce hands-on Rube Goldberg projects.",
     tools: ["Simple machines", "Lesson planning", "Collaborative project development", "Engineering communication"],
     considerations: ["Age-appropriate engineering concepts", "Hands-on construction", "Clear instructions", "Student privacy in any published photographs"],
     gallery: [
@@ -139,8 +139,14 @@ window.PORTFOLIO_PROJECTS = [
 ];
 
 window.PORTFOLIO_SKILLS = [
-  { title: "CAD & engineering software", skills: [["SolidWorks", "Advanced student use"], ["Autodesk Inventor", "Level to confirm"], ["Finite element analysis", "Level to confirm"], ["Technical drawings", "Level to confirm"], ["3D & assembly modeling", "Level to confirm"]] },
-  { title: "Manufacturing & fabrication", skills: [["Fabrication", "Level to confirm"], ["Tube notching", "Level to confirm"], ["Welding", "Level to confirm"], ["Woodworking", "Level to confirm"], ["Machining & prototyping", "Level to confirm"], ["Mechanical assembly", "Level to confirm"]] },
-  { title: "Mechanical engineering", skills: [["Engineering design", "Level to confirm"], ["Statics & mechanics", "Coursework"], ["Material properties", "Level to confirm"], ["Structural design", "Level to confirm"], ["Design for manufacturing", "Level to confirm"], ["Driver ergonomics", "Level to confirm"]] },
-  { title: "Communication & teamwork", skills: [["Technical communication", "Level to confirm"], ["Project coordination", "Level to confirm"], ["Team collaboration", "Level to confirm"], ["Engineering documentation", "Level to confirm"], ["Problem-solving", "Level to confirm"], ["Educational outreach", "Experience"]] }
+  { title: "CAD & engineering software", skills: [["SolidWorks", "Advanced student use"], ["Autodesk Inventor", "Level to confirm"], ["FeatureCAM", "Level to confirm"], ["MATLAB", "Level to confirm"], ["Excel", "Level to confirm"]] },
+  { title: "Manufacturing & fabrication", skills: [["CNC machining & programming", "Level to confirm"], ["Manual machining", "Level to confirm"], ["3D printing", "Level to confirm"], ["Rapid prototyping", "Level to confirm"], ["Tube notching", "Level to confirm"], ["Weld fixture design", "Level to confirm"]] },
+  { title: "Mechanical engineering", skills: [["Engineering design", "Level to confirm"], ["Statics", "Coursework"], ["SolidWorks Simulation FEA", "Level to confirm"], ["Metallurgy", "Level to confirm"], ["Material properties", "Level to confirm"], ["Driver ergonomics", "Level to confirm"]] },
+  { title: "Communication & languages", skills: [["Project coordination", "Level to confirm"], ["Team collaboration", "Level to confirm"], ["Engineering outreach", "Experience"], ["English", "Fluent"], ["Spanish", "Intermediate"]] }
 ];
+
+/* Independent woodworking builds belong here, not under Sonoma Millworks. */
+window.PERSONAL_WOODWORKING_PROJECTS = [];
+
+/* Ceramics work is documented separately from workshop-assistant experience. */
+window.CERAMICS_PROJECTS = [];
