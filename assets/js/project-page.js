@@ -1,7 +1,9 @@
 (function () {
   const root = document.getElementById("project-content");
   const projects = window.PORTFOLIO_PROJECTS || [];
-  const esc = (value) => String(value).replace(/[&<>"']/g, (char) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[char]);
+  const esc = (value) => String(value ?? "").replace(/[&<>"']/g, (char) => ({
+    "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"
+  })[char]);
   const requestedId = new URLSearchParams(window.location.search).get("id");
   const project = projects.find((item) => item.id === requestedId);
   const year = document.getElementById("current-year");
@@ -16,58 +18,81 @@
       nav.classList.toggle("is-open", open);
     });
     nav.addEventListener("click", (event) => {
-      if (event.target.closest("a")) {
-        menuButton.setAttribute("aria-expanded", "false");
-        nav.classList.remove("is-open");
-      }
+      if (!event.target.closest("a")) return;
+      menuButton.setAttribute("aria-expanded", "false");
+      nav.classList.remove("is-open");
     });
   }
 
   if (!project) {
     document.title = "Project not found | Celia Vallotton";
-    root.innerHTML = '<section class="project-missing section-wrap"><div><p class="eyebrow">PORTFOLIO / PROJECT</p><h1>Project not found.</h1><p>Choose a project from the portfolio index.</p><a class="button button-dark" href="index.html#projects">Back to projects <span aria-hidden="true">↗</span></a></div></section>';
+    root.innerHTML = '<section class="project-missing section-wrap"><p class="eyebrow">ENGINEERING PROJECT</p><h1>Project not found</h1><p>Return to the engineering project list to choose a case study.</p><a class="button button-primary" href="index.html#engineering-projects">Engineering Projects</a></section>';
     return;
   }
 
-  const list = (items) => `<ul>${items.map((item) => `<li>${esc(item)}</li>`).join("")}</ul>`;
-  const gallery = (project.gallery || []).map((item, index) => {
+  const imageSlots = (project.gallery || []).map((item) => {
+    const fitClass = item.fit === "contain" ? " image-fit-contain" : "";
     const image = item.src
-      ? `<button class="gallery-open" type="button" data-caption="${esc(item.caption)}" data-alt="${esc(item.alt)}" aria-label="Open image: ${esc(item.label)}"><img class="gallery-source" src="${esc(item.src)}" alt="${esc(item.alt)}" loading="lazy"><span class="sr-only">Expand image</span></button>`
-      : `<div class="gallery-placeholder"><b aria-hidden="true">+</b>${esc(item.label)}<br>Image slot</div>`;
-    return `<figure class="gallery-item"><div class="gallery-frame">${image}</div><figcaption><strong>${esc(item.label)}.</strong> ${esc(item.caption)}${item.src ? "" : ` <span class="gallery-path">Add to <code>${esc(item.folder)}</code>, then set its <code>src</code> in <code>assets/js/projects.js</code>.</span>`}</figcaption></figure>`;
+      ? '<button class="gallery-open" type="button" data-caption="' + esc(item.caption) + '" data-alt="' + esc(item.alt) + '" aria-label="Open image: ' + esc(item.label) + '">' +
+          '<img class="gallery-source' + fitClass + '" src="' + esc(item.src) + '" alt="' + esc(item.alt) + '" loading="lazy">' +
+          '<span class="sr-only">Expand image</span>' +
+        '</button>'
+      : '<div class="gallery-placeholder"><span>Image not added</span></div>';
+    return '<figure class="gallery-item"><div class="gallery-frame">' + image + '</div><figcaption><strong>' + esc(item.label) + '</strong><span>' + esc(item.caption) + '</span></figcaption></figure>';
   }).join("");
 
-  const index = projects.indexOf(project);
-  const previous = projects[(index - 1 + projects.length) % projects.length];
-  const next = projects[(index + 1) % projects.length];
-  const context = project.id === "wave-energy" ? "Three-person SkillsUSA team" : project.id === "baja-chassis" || project.id === "pedal-box" ? "SRJC Baja SAE team" : project.id === "rube-goldberg" ? "Collaborative outreach" : "Individual project";
+  const facts = [];
+  if (project.role) facts.push('<div><dt>Role</dt><dd>' + esc(project.role) + '</dd></div>');
+  if (project.dates) facts.push('<div><dt>Dates</dt><dd>' + esc(project.dates) + '</dd></div>');
+  facts.push('<div><dt>Status</dt><dd>' + esc(project.status) + '</dd></div>');
+  facts.push('<div><dt>Discipline</dt><dd>' + esc(project.category) + '</dd></div>');
+  facts.push('<div><dt>Documentation</dt><dd>' + String((project.gallery || []).length) + ' image slots</dd></div>');
 
-  document.title = `${project.title} | Celia Vallotton`;
+  const considerations = project.considerations?.length
+    ? '<ul>' + project.considerations.map((item) => '<li>' + esc(item) + '</li>').join("") + '</ul>'
+    : "";
+  const tools = project.tools?.length
+    ? '<ul>' + project.tools.map((item) => '<li>' + esc(item) + '</li>').join("") + '</ul>'
+    : "";
+  const sequence = projects.filter((item) => item.showInEngineering !== false);
+  const index = sequence.indexOf(project);
+  let navigation = "";
+  if (index >= 0 && sequence.length > 1) {
+    const previous = sequence[(index - 1 + sequence.length) % sequence.length];
+    const next = sequence[(index + 1) % sequence.length];
+    navigation = '<nav class="project-next" aria-label="Other engineering projects">' +
+      '<a href="project.html?id=' + encodeURIComponent(previous.id) + '">Previous: ' + esc(previous.shortTitle || previous.title) + '</a>' +
+      '<a class="back-projects" href="index.html#engineering-projects">All Engineering Projects</a>' +
+      '<a href="project.html?id=' + encodeURIComponent(next.id) + '">Next: ' + esc(next.shortTitle || next.title) + '</a>' +
+    '</nav>';
+  }
+
+  document.title = project.title + " | Celia Vallotton";
   const description = document.querySelector('meta[name="description"]');
-  if (description) description.content = project.intro.slice(0, 155);
-  root.innerHTML = `
-    <section class="project-hero">
-      <div class="section-wrap">
-        <div class="breadcrumbs"><a href="index.html#home">HOME</a><span>/</span><a href="index.html#projects">PROJECTS</a><span>/</span><span>${esc(project.category)}</span></div>
-        <div class="project-hero-grid">
-          <div><p class="eyebrow">${esc(project.category)} <span class="eyebrow-rule"></span></p><h1>${esc(project.title)}</h1><p class="project-hero-intro">${esc(project.intro)}</p></div>
-          <div class="project-facts" aria-label="Project summary"><div class="project-fact"><span>Status</span><strong>${esc(project.status)}</strong></div><div class="project-fact"><span>Discipline</span><strong>${esc(project.category)}</strong></div><div class="project-fact"><span>Context</span><strong>${esc(context)}</strong></div><div class="project-fact"><span>Documentation</span><strong>${project.gallery.length} image slots</strong></div></div>
-        </div>
-      </div>
-    </section>
-    <div class="section-wrap detail-layout">
-      <div class="detail-main">
-        <section><h2>Project overview</h2><p>${esc(project.what)}</p></section>
-        <section><h2>How</h2><p>${esc(project.how)}</p></section>
-        <section><h2>Why</h2><p>${esc(project.why)}</p></section>
-        ${project.considerations?.length ? `<section><h2>Design &amp; engineering considerations</h2><p>Key factors considered in the work include:</p>${list(project.considerations)}</section>` : ""}
-        <section><h2>Results</h2><p>${esc(project.results)}</p></section>
-        <section class="contribution-box"><h2>My contributions</h2><p>${esc(project.contribution)}</p></section>
-        <section><h2>Images &amp; technical documentation</h2><p>Replace a slot with project documentation by adding an image path in the project data. The gallery order follows the list in <code>assets/js/projects.js</code>; move entries there to rearrange the images.</p><div class="gallery-grid">${gallery}</div></section>
-        <div class="project-next"><a href="project.html?id=${encodeURIComponent(previous.id)}">← ${esc(previous.shortTitle || previous.title)}</a><a class="back-projects" href="index.html#projects">All projects ↗</a><a href="project.html?id=${encodeURIComponent(next.id)}">${esc(next.shortTitle || next.title)} →</a></div>
-      </div>
-      <aside class="detail-sidebar"><h2>Technical highlights</h2><ul>${project.tools.map((tool) => `<li>${esc(tool)}</li>`).join("")}</ul><p>Project status and contributions are described as provided; unconfirmed performance details are left out.</p></aside>
-    </div>`;
+  if (description) description.content = String(project.intro || project.what || "").slice(0, 155);
+
+  root.innerHTML =
+    '<section class="project-detail-header">' +
+      '<div class="section-wrap">' +
+        '<p class="breadcrumbs"><a href="index.html#engineering-projects">Engineering Projects</a><span>/</span><span>' + esc(project.category) + '</span></p>' +
+        '<p class="eyebrow">' + esc(project.status) + '</p>' +
+        '<h1>' + esc(project.title) + '</h1>' +
+        '<p class="project-lede">' + esc(project.intro) + '</p>' +
+        '<dl class="project-facts">' + facts.join("") + '</dl>' +
+      '</div>' +
+    '</section>' +
+    '<div class="section-wrap detail-layout">' +
+      '<main class="case-study">' +
+        '<section class="case-section"><h2>Project overview</h2><p>' + esc(project.what) + '</p></section>' +
+        '<section class="case-section"><h2>Design &amp; implementation</h2><p>' + esc(project.how) + '</p></section>' +
+        '<section class="case-section"><h2>Technical considerations</h2><p>' + esc(project.why) + '</p>' + considerations + '</section>' +
+        '<section class="case-section documentation-section"><h2>CAD &amp; project documentation</h2><div class="gallery-grid">' + imageSlots + '</div></section>' +
+        '<section class="case-section"><h2>Results &amp; current status</h2><p>' + esc(project.results) + '</p></section>' +
+        '<section class="case-section contribution-section"><h2>Role &amp; contribution</h2><p>' + esc(project.contribution) + '</p></section>' +
+        navigation +
+      '</main>' +
+      '<aside class="detail-sidebar"><h2>Tools &amp; methods</h2>' + tools + '</aside>' +
+    '</div>';
 
   const dialog = document.querySelector(".lightbox");
   const lightboxImage = dialog?.querySelector("img");
@@ -77,7 +102,7 @@
     if (!button) return;
     const fallback = document.createElement("div");
     fallback.className = "gallery-placeholder";
-    fallback.innerHTML = `<b aria-hidden="true">+</b>${esc(image.alt)}<br>Image file not found`;
+    fallback.innerHTML = "<span>Image unavailable</span>";
     button.replaceWith(fallback);
   }));
   root.addEventListener("click", (event) => {
@@ -86,7 +111,7 @@
     const image = button.querySelector("img");
     lightboxImage.src = image.src;
     lightboxImage.alt = button.dataset.alt || image.alt;
-    lightboxCaption.textContent = button.dataset.caption || "";
+    if (lightboxCaption) lightboxCaption.textContent = button.dataset.caption || "";
     dialog.showModal();
   });
 })();

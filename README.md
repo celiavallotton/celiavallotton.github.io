@@ -15,7 +15,7 @@ Then open <http://localhost:8000>. Press `Ctrl+C` in PowerShell to stop the serv
 ## Project layout
 
 ```text
-index.html                 Home, About, Projects, Woodworking, Ceramics, Coffee Business, Machining, Side Projects, Skills, Experience, Resume, Contact
+index.html                 Home, Engineering Projects, Manufacturing & Fabrication, Technical Skills, Education & Experience, Additional Projects, Resume, Contact
 project.html               Reusable individual project detail page
 assets/
   css/site.css             Visual system, responsive layouts, and print styles
@@ -92,11 +92,11 @@ Use the matching folder for other projects: for example, `assets/images/ceramics
 
 Available folders: `profile`, `baja`, `wave-energy`, `tensile-tester`, `sonoma-millworks`, `personal-woodworking`, `ceramics`, `rube-goldberg`, `coffee-business`, `machining`, `small-eng-side-projects`, and `general`. No stock project photos are included. Before publishing classroom photos, confirm that publication is appropriate and avoid identifiable student images without permission.
 
-The About section also has a portrait slot. Add a portrait to `assets/images/profile/`, then replace the inline illustration in `index.html` with an `<img>` element and descriptive `alt` text.
+The Home section uses the Baja chassis side-view image as its featured image. To change it, update the image `src` in the Home section of `index.html`.
 
 ## Add personal woodworking projects
 
-The separate **Woodworking** section is for personal builds; Sonoma Millworks stays listed under Experience. Add entries to `window.PERSONAL_WOODWORKING_PROJECTS` in `assets/js/projects.js`:
+The **Additional Projects** section includes personal woodworking builds; Sonoma Millworks stays listed under Manufacturing & Fabrication and Education & Experience. Add entries to `window.PERSONAL_WOODWORKING_PROJECTS` in `assets/js/projects.js`:
 
 ```js
 window.PERSONAL_WOODWORKING_PROJECTS = [
@@ -114,7 +114,7 @@ Add photos to `assets/images/personal-woodworking/`. The `src` field is optional
 
 ## Add ceramics work
 
-The **Ceramics** section is a separate portfolio collection from the Sonoma Art School workshop-assistant experience. Add each piece to `window.CERAMICS_PROJECTS` in `assets/js/projects.js`:
+The ceramics group in **Additional Projects** is separate from the Sonoma Art School workshop-assistant experience. Add each piece to `window.CERAMICS_PROJECTS` in `assets/js/projects.js`:
 
 ```js
 window.CERAMICS_PROJECTS = [
@@ -133,8 +133,8 @@ Add photos to `assets/images/ceramics/`. The `src` field is optional; without it
 ## Update skills, experience, and contact information
 
 - Edit `window.PORTFOLIO_SKILLS` in `assets/js/projects.js`. SolidWorks is currently listed as “Advanced student use”; other levels are marked for confirmation.
-- Edit the About, Education, Experience, and Contact sections directly in `index.html`.
-- Replace the email and LinkedIn placeholders in the Contact section only after confirming which public details to use. The GitHub link is already set to `github.com/celiavallotton`.
+- Edit the Home, Education & Experience, and Contact sections directly in `index.html`.
+- The Contact section uses the current email address, GitHub profile, and Santa Rosa location. Update these directly in `index.html` if they change.
 - Keep dates, qualifications, technical results, and project status current and verified.
 
 ## Replace the resume PDF
