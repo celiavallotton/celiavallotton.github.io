@@ -62,7 +62,6 @@ window.PORTFOLIO_PROJECTS = [
     status: "Work Experience",
     role: "Part-time manufacturing experience",
     dates: "June 2025â€“Present",
-    showInEngineering: false,
     cardSummary: "Hands-on woodworking and manufacturing experience with physical materials, fabrication, framing, and product development.",
     intro: "Since June 2025, I have worked part-time at Sonoma Millworks, assisting with fabrication and finishing custom wood products, product development, showroom work, and preparation for retail and wholesale distribution.",
     what: "Support the fabrication and finishing of custom wood products. I also contributed to product development and production of VinoPlank Sprig Vases made from reclaimed wood.",
@@ -155,10 +154,10 @@ window.MACHINING_PROJECTS = [
   { title: "Tapping operation", summary: "A close view of a tapping setup at the machine.", src: "assets/images/machining/tapping.webp", alt: "Tapping tool positioned over a workpiece in a machine setup." }
 ];
 
-window.FABRICATION_PROJECTS = [
-  { title: "Chassis fixture CAD", summary: "SolidWorks assembly showing welding fixtures positioned around the Baja chassis.", src: "assets/images/baja/full-fixtures-CAD.webp", alt: "CAD model of welding fixtures arranged around a tubular Baja chassis.", fit: "contain" },
-  { title: "Roll hoop fixture", summary: "Fixture used to hold the roll hoop during fabrication.", src: "assets/images/baja/roll-hoop-fixturing.webp", alt: "Roll hoop positioned in a workshop fixture." },
-  { title: "Chassis fabrication setup", summary: "Workshop setup for chassis fabrication and assembly.", src: "assets/images/baja/welders-set-up.webp", alt: "Welding fixtures and chassis fabrication materials arranged on a workshop table." }
+window.CEQUIN_ROASTING_PHOTOS = [
+  { title: "Roasting setup", summary: "Add a photo and notes about the roasting setup.", alt: "Placeholder for a Cequin Coffee roasting setup photo.", folder: "assets/images/coffee-business/", src: "" },
+  { title: "Roasting process", summary: "Add a photo and notes about a roasting step.", alt: "Placeholder for a Cequin Coffee roasting process photo.", folder: "assets/images/coffee-business/", src: "" },
+  { title: "Roasted coffee", summary: "Add a photo and notes about the roasted coffee or production stage.", alt: "Placeholder for a Cequin Coffee roasted coffee photo.", folder: "assets/images/coffee-business/", src: "" }
 ];
 
 window.SMALL_ENGINEERING_PROJECTS = [
@@ -241,7 +240,7 @@ const collectionCaseStudies = [
     status: "Documentation to add",
     role: "Personal projects",
     cardSummary: "A dedicated space for ceramic pieces, process photographs, and technique notes.",
-    intro: "This page is reserved for ceramic pieces and process documentation. Sonoma Art School workshop-assistant experience is listed separately under Education & Experience.",
+    intro: "This page is reserved for ceramic pieces and process documentation. Sonoma Art School workshop-assistant experience is listed separately under Education and Professional Experience.",
     what: "Build a visual record of selected ceramic pieces and the processes used to make them.",
     how: "Add photographs and a short note for each piece as documentation becomes available. The prompts below provide a structure for recording the work.",
     why: "A consistent record of form, technique, and finish makes it easier to present each piece and its making process.",
@@ -258,23 +257,24 @@ const collectionCaseStudies = [
   },
   {
     id: "coffee-kiosk",
-    title: "Cequin Coffee Kiosk Design & Build",
-    shortTitle: "Coffee kiosk",
+    title: "Cequin Coffee Company: Kiosk & Roasting Operations",
+    shortTitle: "Cequin Coffee",
     category: "Product Development",
     tags: ["Product Development", "Woodworking", "Manufacturing", "Personal Projects"],
     status: "Built",
     role: "Co-owner and project contributor",
-    cardSummary: "CAD concept, workshop fabrication, and completed kiosk for Cequin Coffee Company.",
-    intro: "This project documents the portable service kiosk developed for Cequin Coffee Company, from its CAD concept through workshop fabrication to the completed enclosure.",
+    cardSummary: "Coffee kiosk design and fabrication, with space for roasting operations documentation.",
+    intro: "This project documents work for Cequin Coffee Company, including the portable service kiosk from CAD concept through fabrication and a dedicated gallery for coffee roasting operations.",
     what: "Develop and build a portable service kiosk for use by Cequin Coffee Company.",
-    how: "The selected images show the CAD concept, enclosure during fabrication, and completed kiosk. Add dimensions, design revisions, material choices, and setup details as they are documented.",
+    how: "The selected images show the CAD concept, enclosure during fabrication, and completed kiosk. The roasting operations gallery is ready for process photographs and notes. Add dimensions, design revisions, material choices, and setup details as they are documented.",
     why: "The kiosk needed to serve a practical business use while being designed and built as a physical enclosure. This page leaves room to document its design and fabrication decisions.",
     results: "A kiosk enclosure was built. Further specifications and operating details can be added when available.",
     contribution: "This work was completed in the context of Cequin Coffee Company. Add specific individual and collaborator contributions with the process documentation.",
     tools: ["CAD", "Woodworking", "Fabrication", "Product development"],
     considerations: ["Service and event use", "Enclosure design", "Materials and fabrication", "Transport and setup"],
     images: window.COFFEE_BUSINESS_PROJECTS,
-    documentationTopics: ["Design sketches and CAD iterations", "Dimensions and material choices", "Fabrication sequence", "Transport, setup, and use"]
+    documentationTopics: ["Design sketches and CAD iterations", "Dimensions and material choices", "Fabrication sequence", "Transport, setup, and use"],
+    instagramProfile: "https://www.instagram.com/cequincoffee/"
   }
 ];
 
@@ -393,7 +393,10 @@ projectById["coffee-kiosk"].mediaGroups = [
   ])),
   mediaGroup("Completed kiosk", "The finished coffee kiosk.", images("coffee-business", [
     ["cq-box-done.webp", "Completed kiosk", "Completed wooden coffee kiosk ready for use.", "cover", true]
-  ]))
+  ])),
+  mediaGroup("Coffee roasting operations", "Add photographs and notes documenting coffee roasting and production.", window.CEQUIN_ROASTING_PHOTOS.map((photo) => ({
+    label: photo.title, caption: photo.summary, alt: photo.alt, src: photo.src
+  })))
 ];
 
 projectById["small-engineering"].mediaGroups = [

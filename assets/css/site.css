@@ -103,7 +103,6 @@ p { margin-bottom: 14px; }
 .additional-group:first-of-type { margin-top: 0; padding-top: 0; border-top: 0; }
 .additional-grid .collection-image { height: 175px; }
 .collection-note { margin: 0; padding: 12px 0; border-top: 1px solid var(--line); color: var(--muted); font-size: 12px; }
-.manufacturing-link { display: inline-block; margin-top: 12px; }
 
 .skill-groups { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
 .skill-group { min-width: 0; padding: 18px 20px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); }
@@ -130,6 +129,16 @@ p { margin-bottom: 14px; }
 .experience-heading > span { flex: none; color: var(--muted); font-size: 10px; text-align: right; }
 .experience-item ul { margin: 8px 0 10px; padding-left: 18px; color: #46535a; font-size: 11px; }
 .experience-item li + li { margin-top: 4px; }
+.experience-photo-area { margin: 12px 0; padding: 13px; background: #fff; border: 1px solid var(--line); }
+.experience-photo-area h5 { margin: 0 0 4px; font-size: 13px; }
+.experience-photo-area > p { margin: 0 0 10px; color: var(--muted); font-size: 11px; }
+.experience-photo-area .collection-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 9px; }
+.experience-photo-area .collection-image { height: 105px; }
+.experience-photo-area .collection-card-copy { padding: 8px; }
+.experience-photo-area .collection-card h4 { font-size: 12px; }
+.experience-photo-area .collection-card p { font-size: 10px; }
+.company-social-links { display: flex; flex-wrap: wrap; gap: 7px 14px; margin: 8px 0 10px; }
+.company-social-links a { font-size: 11px; font-weight: 600; }
 
 .resume-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 15px; margin-bottom: 14px; }
 .resume-preview-wrap { border: 1px solid var(--line); background: white; }
@@ -181,6 +190,8 @@ p { margin-bottom: 14px; }
 .media-collection h3 { margin-bottom: 5px; font-size: 15px; }
 .project-video video { display: block; width: min(100%, 920px); max-height: 72vh; margin-top: 10px; border: 1px solid var(--line); background: #111; }
 .project-video p { margin-top: 8px !important; color: var(--muted) !important; font-size: 11px !important; }
+.instagram-reel > p { margin-bottom: 12px !important; color: var(--muted) !important; font-size: 12px !important; }
+.instagram-reel .instagram-media { width: min(100%, 540px) !important; min-width: 0 !important; margin: 10px auto 0 !important; border: 1px solid var(--line) !important; border-radius: 3px; box-shadow: none !important; }
 .detail-sidebar { position: sticky; top: calc(var(--header-height) + 18px); padding: 17px; background: var(--surface); border: 1px solid var(--line); }
 .detail-sidebar h2 { margin-bottom: 10px; font-size: 15px; }
 .detail-sidebar ul { margin: 0; padding-left: 18px; color: #46535a; font-size: 11px; }
@@ -237,6 +248,8 @@ p { margin-bottom: 14px; }
   .subsection-heading > .text-link { display: inline-block; margin-top: 9px; }
   .skill-groups { grid-template-columns: 1fr; }
   .education-experience-grid { grid-template-columns: 1fr; gap: 27px; }
+  .experience-photo-area .collection-grid { grid-template-columns: 1fr; }
+  .experience-photo-area .collection-image { height: 170px; }
   .contact-layout { grid-template-columns: 1fr; gap: 20px; }
   .detail-layout { grid-template-columns: 1fr; gap: 20px; }
   .detail-sidebar { position: static; grid-row: 1; }

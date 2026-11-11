@@ -15,7 +15,7 @@ Then open <http://localhost:8000>. Press `Ctrl+C` in PowerShell to stop the serv
 ## Project layout
 
 ```text
-index.html                 Home, Projects, Manufacturing & Fabrication, Technical Skills, Education & Experience, Resume, Contact
+index.html                 Home, Projects, Technical Skills, Education and Professional Experience, Resume, Contact
 project.html               Reusable individual project detail page
 assets/
   css/site.css             Visual system, responsive layouts, and print styles
@@ -96,15 +96,15 @@ The Home section uses the Baja chassis side-view image as its featured image. To
 
 ## Personal project pages
 
-The Projects list includes detailed pages for small engineering projects, personal woodworking, ceramics, the Cequin Coffee kiosk, machining, and the tensile tester. Their photo groups are under `projectById[...]` near the bottom of `assets/js/projects.js`; ceramics entries are in `window.CERAMICS_PROJECTS`. The Chassis page groups Baja images into a four-step timeline. Each case study also has prompts for future documentation.
+The Projects list includes detailed pages for small engineering projects, personal woodworking, ceramics, Cequin Coffee Company, machining, Sonoma Millworks, and the tensile tester. Their photo groups are under `projectById[...]` near the bottom of `assets/js/projects.js`; ceramics entries are in `window.CERAMICS_PROJECTS`. The Chassis page groups Baja images into a four-step timeline. Each case study also has prompts for future documentation. Cequin Coffee has three roasting photo slots in both its project page and the Professional Experience section; set each `src` in `window.CEQUIN_ROASTING_PHOTOS` when the WebP files are ready.
 
-Sonoma Millworks remains under Manufacturing & Fabrication and Education & Experience. Sonoma Art School workshop-assistant experience remains under Education & Experience.
+Sonoma Millworks is included in Projects and Professional Experience. Cequin Coffee Company remains in Professional Experience, with kiosk and roasting documentation linked from its entry. Its project page embeds the public Instagram profile through Instagram's embed script and keeps a direct profile link as a fallback. Sonoma Art School workshop-assistant experience remains under Professional Experience.
 
 
 ## Update skills, experience, and contact information
 
 - Edit `window.PORTFOLIO_SKILLS` in `assets/js/projects.js`. SolidWorks is currently listed as “Advanced student use”; other levels are marked for confirmation.
-- Edit the Home, Education & Experience, and Contact sections directly in `index.html`.
+- Edit the Home, Education and Professional Experience, and Contact sections directly in `index.html`.
 - The Contact section uses the current email address, GitHub profile, and Santa Rosa location. Update these directly in `index.html` if they change.
 - Keep dates, qualifications, technical results, and project status current and verified.
 

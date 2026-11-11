@@ -3,7 +3,7 @@
     "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"
   })[char]);
   const projectList = window.PORTFOLIO_PROJECTS || [];
-  const priority = ["baja-chassis", "tensile-tester", "machining", "small-engineering", "ceramics", "woodworking", "coffee-kiosk", "wave-energy", "rube-goldberg"];
+  const priority = ["baja-chassis", "tensile-tester", "machining", "small-engineering", "ceramics", "woodworking", "coffee-kiosk", "sonoma-millworks", "wave-energy", "rube-goldberg"];
   const projects = projectList.filter((project) => project.showInEngineering !== false).sort((a, b) => {
     const ai = priority.indexOf(a.id);
     const bi = priority.indexOf(b.id);
@@ -64,32 +64,18 @@
     ).join("");
   }
 
-  function renderCollection(gridId, projects) {
-    const root = document.getElementById(gridId);
-    if (!root) return;
-    root.innerHTML = projects.map((project) => {
-      const title = project.title || project.label || "Project image";
-      const summary = project.summary || project.caption || "";
-      const fitClass = project.fit === "contain" ? " image-fit-contain" : "";
-      return '<article class="collection-card">' +
-        '<img class="collection-image' + fitClass + '" src="' + escapeHtml(project.src) + '" alt="' + escapeHtml(project.alt || title) + '" loading="lazy">' +
-        '<div class="collection-card-copy"><h4>' + escapeHtml(title) + '</h4><p>' + escapeHtml(summary) + '</p></div>' +
-      '</article>';
-    }).join("");
-    root.querySelectorAll("img").forEach((image) => image.addEventListener("error", () => {
-      const fallback = document.createElement("div");
-      fallback.className = "collection-image image-placeholder";
-      fallback.textContent = "Image unavailable";
-      image.replaceWith(fallback);
-    }));
+  const roastingGrid = document.getElementById("cequin-roasting-grid");
+  if (roastingGrid) {
+    roastingGrid.innerHTML = (window.CEQUIN_ROASTING_PHOTOS || []).map((photo) =>
+      '<article class="collection-card">' +
+        (photo.src
+          ? '<img class="collection-image" src="' + escapeHtml(photo.src) + '" alt="' + escapeHtml(photo.alt || photo.title) + '" loading="lazy">'
+          : '<div class="collection-image image-placeholder">Add roasting photo</div>') +
+        '<div class="collection-card-copy"><h4>' + escapeHtml(photo.title) + '</h4><p>' + escapeHtml(photo.summary) + '</p></div>' +
+      '</article>'
+    ).join("");
   }
 
-  const sonoma = projectList.find((project) => project.id === "sonoma-millworks");
-  renderCollection("sonoma-grid", (sonoma?.gallery || []).map((image) => ({
-    title: image.label, summary: image.caption, src: image.src, alt: image.alt, fit: image.fit
-  })));
-  renderCollection("machining-grid", window.MACHINING_PROJECTS || []);
-  renderCollection("fabrication-grid", window.FABRICATION_PROJECTS || []);
   const menuButton = document.querySelector(".menu-toggle");
   const nav = document.getElementById("primary-nav");
   if (menuButton && nav) {

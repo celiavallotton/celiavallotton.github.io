@@ -38,11 +38,11 @@
           '<img class="gallery-source' + fitClass + '" src="' + esc(item.src) + '" alt="' + esc(item.alt) + '" loading="lazy">' +
           '<span class="sr-only">Expand image</span>' +
         '</button>'
-      : '<div class="gallery-placeholder"><span>Image not added</span></div>';
+      : '<div class="gallery-placeholder"><span>Add photo: ' + esc(item.label) + '</span></div>';
     return '<figure class="gallery-item' + featuredClass + '"><div class="gallery-frame">' + image + '</div><figcaption><strong>' + esc(item.label) + '</strong><span>' + esc(item.caption) + '</span></figcaption></figure>';
   }).join("");
 
-  const galleryCount = (project.gallery || []).length;
+  const galleryCount = (project.gallery || []).filter((item) => item.src).length;
   const documentationBody = project.timelineStages?.length
     ? '<ol class="project-timeline">' + project.timelineStages.map((stage, stageIndex) =>
         '<li class="timeline-stage"><span class="timeline-marker" aria-hidden="true">' + String(stageIndex + 1).padStart(2, "0") + '</span>' +
@@ -59,6 +59,9 @@
       : '<div class="gallery-grid">' + renderGallery(project.gallery) + '</div>';
   const videoSection = project.video
     ? '<section class="case-section project-video"><h2>' + esc(project.video.title || "Project video") + '</h2><video controls preload="metadata" playsinline><source src="' + esc(project.video.src) + '" type="video/mp4">Your browser does not support embedded video. <a href="' + esc(project.video.src) + '">Open the video file</a>.</video><p>' + esc(project.video.caption || "") + '</p></section>'
+    : "";
+  const instagramSection = project.instagramProfile
+    ? '<section class="case-section instagram-reel"><h2>Instagram photo &amp; video reel</h2><p>Recent public posts and reels from Cequin Coffee Company. Instagram controls this embed; use the profile link if it does not load.</p><blockquote class="instagram-media" data-instgrm-permalink="' + esc(project.instagramProfile) + '" data-instgrm-version="14"><a href="' + esc(project.instagramProfile) + '" target="_blank" rel="noreferrer">View @cequincoffee on Instagram</a></blockquote></section>'
     : "";
 
   const facts = [];
@@ -80,7 +83,7 @@
   const tools = project.tools?.length
     ? '<ul>' + project.tools.map((item) => '<li>' + esc(item) + '</li>').join("") + '</ul>'
     : "";
-  const projectPriority = ["baja-chassis", "tensile-tester", "machining", "small-engineering", "ceramics", "woodworking", "coffee-kiosk", "wave-energy", "rube-goldberg"];
+  const projectPriority = ["baja-chassis", "tensile-tester", "machining", "small-engineering", "ceramics", "woodworking", "coffee-kiosk", "sonoma-millworks", "wave-energy", "rube-goldberg"];
   const sequence = projects.filter((item) => item.showInEngineering !== false).sort((a, b) => {
     const ai = projectPriority.indexOf(a.id);
     const bi = projectPriority.indexOf(b.id);
@@ -120,6 +123,7 @@
         '<section class="case-section"><h2>Technical considerations</h2><p>' + esc(project.why) + '</p>' + considerations + '</section>' +
         '<section class="case-section documentation-section"><h2>' + (project.timelineStages?.length ? 'Project timeline' : 'Project documentation') + '</h2>' + documentationBody + '</section>' +
         documentationTopics +
+        instagramSection +
         videoSection +
         '<section class="case-section"><h2>Results &amp; current status</h2><p>' + esc(project.results) + '</p></section>' +
         '<section class="case-section contribution-section"><h2>Role &amp; contribution</h2><p>' + esc(project.contribution) + '</p></section>' +
@@ -127,6 +131,13 @@
       '</main>' +
       '<aside class="detail-sidebar"><h2>Tools &amp; methods</h2>' + tools + '</aside>' +
     '</div>';
+
+  if (project.instagramProfile) {
+    const instagramScript = document.createElement("script");
+    instagramScript.async = true;
+    instagramScript.src = "https://www.instagram.com/embed.js";
+    document.body.appendChild(instagramScript);
+  }
 
   const dialog = document.querySelector(".lightbox");
   const lightboxImage = dialog?.querySelector("img");
