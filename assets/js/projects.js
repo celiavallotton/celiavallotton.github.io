@@ -16,62 +16,16 @@ window.PORTFOLIO_PROJECTS = [
     cardSummary: "Chassis and roll cage development for the SRJC Baja SAE vehicle, balancing structural design, driver needs, packaging, and fabrication constraints.",
     intro: "Since August 2025, I have served as Chassis Lead for the Santa Rosa Junior College Baja SAE team. The work brings together structural geometry, driver safety and ergonomics, component packaging, manufacturing, and competition requirements.",
     what: "Develop a tubular vehicle chassis and roll cage intended to meet Baja SAE technical requirements while integrating with the team's vehicle systems. Chassis design and vehicle development are ongoing; no competition result or technical inspection outcome is claimed here.",
-    how: "I developed the chassis and roll cage in SolidWorks and conducted SolidWorks Simulation FEA to evaluate loading and stress concentrations from predicted impacts. I also led a collaborative SRJC Society of Women Engineers team through the design and fabrication of a full-scale PVC chassis prototype to evaluate seating geometry, driver ergonomics, and egress. Current design work considers firewall geometry, mounting locations, body-panel attachment, reinforcement, and gusset placement. Fixture design and tube-notching process work are documented in their own case studies.",
+    how: "I developed the chassis and roll cage in SolidWorks and conducted SolidWorks Simulation FEA to evaluate loading and stress concentrations from predicted impacts. I also led a collaborative SRJC Society of Women Engineers team through the design and fabrication of a full-scale PVC chassis prototype to evaluate seating geometry, driver ergonomics, and egress. Current design work considers firewall geometry, mounting locations, body-panel attachment, reinforcement, and gusset placement. The timeline below groups chassis design, PVC prototyping, welding fixtures, and tube preparation into one project sequence.",
     why: "A chassis has to satisfy competing needs at once: structural requirements, driver safety and ergonomics, weight, packaging, accessibility, manufacturability, and competition rules. Joint geometry and member placement affect both the design and the practical work of cutting, fitting, and assembling 4130 chromoly tubing.",
     results: "The team designed and fabricated a full-scale PVC chassis prototype to evaluate driver ergonomics. Chassis development remains in progress; this prototype does not represent final vehicle fabrication, competition, or technical inspection.",
-    contribution: "I lead chassis subsystem design and conduct SolidWorks Simulation FEA. I also led a collaborative team through PVC chassis prototype work. Chassis design is coordinated with other vehicle subteams.",
+    contribution: "I lead chassis subsystem design and conduct SolidWorks Simulation FEA. I also designed and fabricated welding fixtures, developed tube-notching processes, and led a collaborative team through PVC chassis prototype work. Chassis design is coordinated with other vehicle subteams.",
     tools: ["SolidWorks", "SolidWorks Simulation FEA", "4130 chromoly steel tubing", "PVC chassis prototype"],
     considerations: ["Roll cage geometry", "Primary and secondary structural members", "Driver ergonomics", "Component mounting and packaging", "Structural analysis", "Manufacturing and assembly", "Baja SAE technical requirements"],
     gallery: [
       { label: "Chassis side view", caption: "SolidWorks model of the Baja chassis frame in an angled side view.", alt: "Angled side view of a tubular Baja chassis frame in SolidWorks.", fit: "contain", folder: "assets/images/baja/", src: "assets/images/baja/chassis-side-view.webp" },
       { label: "Ergonomics prototype", caption: "Full-scale PVC prototype used to assess seating and driver access.", alt: "Full-scale PVC chassis ergonomics prototype with a plywood floor panel.", folder: "assets/images/baja/", src: "assets/images/baja/plywood-ergo.webp" },
       { label: "Chassis angles", caption: "Drawing views used during chassis design.", alt: "Engineering drawing views of chassis tube angles.", fit: "contain", folder: "assets/images/baja/", src: "assets/images/baja/chassis-angles-dwg-1.webp" }
-    ]
-  },
-  {
-    id: "weld-fixture",
-    title: "Baja SAE Weld Fixture Design & Fabrication",
-    shortTitle: "Weld fixture",
-    category: "Manufacturing",
-    tags: ["Manufacturing", "Mechanical Design", "CAD / FEA"],
-    status: "Designed and fabricated",
-    role: "Fixture designer and fabricator",
-    cardSummary: "Fixture CAD, fabrication planning, and workshop photos documenting supports made for chassis welding.",
-    intro: "I designed and fabricated welding fixtures for the SRJC Baja SAE chassis work. This case study focuses on tooling used to position and support chassis components during fabrication.",
-    what: "Develop welding fixtures to support chassis fabrication and hold components in position during welding.",
-    how: "I designed the fixture assembly in SolidWorks, prepared fixture components, and fabricated the supports used in the workshop. The images show the CAD assembly, fixture documentation, and roll hoop setup.",
-    why: "Purpose-built fixtures help locate and support components during fabrication. Fixture design has to suit the parts being joined and the practical space and access available during welding.",
-    results: "Welding fixtures were designed and fabricated for the chassis work. No dimensional accuracy or measured production results are claimed.",
-    contribution: "I designed and fabricated the chassis welding fixtures.",
-    tools: ["SolidWorks", "Fixture design", "Welding", "Workshop fabrication"],
-    considerations: ["Part location and support", "Assembly access", "Fabrication sequence", "Fixture documentation"],
-    gallery: [
-      { label: "Fixture CAD assembly", caption: "SolidWorks assembly showing fixtures positioned around the chassis.", alt: "CAD model of welding fixtures arranged around a tubular Baja chassis.", fit: "contain", folder: "assets/images/baja/", src: "assets/images/baja/full-fixtures-CAD.webp" },
-      { label: "Fixture bill of materials", caption: "Fixture component documentation.", alt: "Bill of materials for components in the chassis welding fixture assembly.", fit: "contain", folder: "assets/images/baja/", src: "assets/images/baja/fixtures-bom-total.webp" },
-      { label: "Roll hoop setup", caption: "Roll hoop positioned in its fabrication fixture.", alt: "Roll hoop positioned in a wooden welding fixture in the workshop.", folder: "assets/images/baja/", src: "assets/images/baja/roll-hoop-fixturing.webp" }
-    ]
-  },
-  {
-    id: "tube-notching",
-    title: "Baja SAE Tube Notching Process",
-    shortTitle: "Tube notching process",
-    category: "Manufacturing",
-    tags: ["Manufacturing", "Mechanical Design"],
-    status: "Process developed",
-    role: "Chassis Lead",
-    cardSummary: "Tube preparation workflow developed to support fit-up and fabrication of the tubular chassis.",
-    intro: "I developed tube-notching processes as part of SRJC Baja SAE chassis fabrication. This case study brings together tube-layout documentation and workshop images related to preparing chassis members for fit-up.",
-    what: "Prepare tubular chassis members for fit-up and assembly using a repeatable notching workflow.",
-    how: "The available documentation shows tube naming and layout work alongside preparation, grinding, and deburring steps. Further process settings and measured fit-up results can be added as they are documented.",
-    why: "Tube ends need to fit adjoining members at the intended joint locations. Consistent layout and preparation support assembly and welding of a tubular chassis.",
-    results: "Tube-notching processes were developed for the chassis work. No tolerances or production rates are claimed.",
-    contribution: "I developed tube-notching processes for the SRJC Baja SAE chassis project.",
-    tools: ["Tube layout", "Tube notching", "Grinding", "Deburring", "4130 chromoly steel tubing"],
-    considerations: ["Tube identification and orientation", "Joint fit-up", "Preparation sequence", "Consistency across chassis members"],
-    gallery: [
-      { label: "Tube identification", caption: "Tube naming documentation used during chassis work.", alt: "Chassis tube naming diagram used to identify frame members.", fit: "contain", folder: "assets/images/baja/", src: "assets/images/baja/tube-naming-1.webp" },
-      { label: "Tube layout", caption: "Unrolled tube layout documentation.", alt: "Unrolled layout for a chassis tube.", fit: "contain", folder: "assets/images/baja/", src: "assets/images/baja/unrolled-tube-temp.webp" },
-      { label: "Tube preparation", caption: "Grinding and deburring operations during chassis tube preparation.", alt: "Chassis tubes being prepared in the workshop.", folder: "assets/images/baja/", src: "assets/images/baja/deburring-tubes.webp" }
     ]
   },
   {
@@ -174,7 +128,7 @@ window.PORTFOLIO_PROJECTS = [
 window.PORTFOLIO_SKILLS = [
   { title: "CAD & mechanical design", skills: [["SolidWorks", "Advanced student use"], ["Autodesk Inventor", "Level to confirm"], ["Engineering design", "Level to confirm"], ["Driver ergonomics", "Level to confirm"]] },
   { title: "Engineering analysis", skills: [["SolidWorks Simulation FEA", "Level to confirm"], ["Statics", "Coursework"], ["Material properties", "Level to confirm"], ["Metallurgy", "Level to confirm"]] },
-  { title: "Manufacturing & fabrication", skills: [["CNC machining & programming", "Level to confirm"], ["Manual machining", "Level to confirm"], ["3D printing", "Level to confirm"], ["Rapid prototyping", "Level to confirm"], ["Tube notching", "Level to confirm"], ["Weld fixture design", "Level to confirm"]] },
+  { title: "Manufacturing & fabrication", skills: [["CNC machining & programming", "Level to confirm"], ["Manual machining", "Level to confirm"], ["Quality inspection", "Level to confirm"], ["3D printing", "Level to confirm"], ["Rapid prototyping", "Level to confirm"], ["Tube notching", "Level to confirm"], ["Weld fixture design", "Level to confirm"]] },
   { title: "Software", skills: [["FeatureCAM", "Level to confirm"], ["MATLAB", "Level to confirm"], ["Excel", "Level to confirm"]] },
   { title: "Communication & languages", skills: [["Project coordination", "Level to confirm"], ["Team collaboration", "Level to confirm"], ["Engineering outreach", "Experience"], ["English", "Fluent"], ["Spanish", "Intermediate"]] }
 ];
@@ -213,3 +167,367 @@ window.SMALL_ENGINEERING_PROJECTS = [
   { title: "Grabber mechanism", summary: "A prototype grabber shown in its open position.", src: "assets/images/small-eng-side-projects/grabber-open.webp", alt: "Prototype grabber mechanism extended on a work surface." },
   { title: "Hydraulic prototype", summary: "A small hydraulic mechanism built as a hands-on engineering project.", src: "assets/images/small-eng-side-projects/hydraulic-1.webp", alt: "Small hydraulic prototype made from wood, tubing, and mechanical components." }
 ];
+
+/* Personal collections are full project pages, with prompts for future documentation. */
+const collectionCaseStudies = [
+  {
+    id: "machining",
+    title: "Machining & Quality Inspection",
+    shortTitle: "Machining",
+    category: "Manufacturing",
+    tags: ["Manufacturing", "Quality Inspection"],
+    status: "Selected machining work",
+    cardSummary: "Selected CNC and manual machining photographs, with space to document inspection methods and measured features.",
+    intro: "This page brings together selected machining work, including a CNC milling setup, a drilled plate, and a tapping operation. It also provides a place to document quality inspection methods alongside machined parts.",
+    what: "Present selected machining examples and document how part features are checked against their design requirements.",
+    how: "The current gallery shows selected machining setups and a machined plate. Add the part drawing, inspection plan, instruments, and measurement records when specific examples are available.",
+    why: "Machining and inspection work together: measurements can be compared with drawing requirements to assess whether a part meets its intended dimensions and features.",
+    results: "Selected machining images are included. No inspection results or part tolerances are claimed until documented.",
+    contribution: "Add the specific machining and inspection tasks performed for each part as those project records are collected.",
+    tools: ["CNC machining", "Manual machining", "Quality inspection"],
+    considerations: ["Drawing requirements", "Feature identification", "Measurement method", "Recording and comparing results"],
+    images: window.MACHINING_PROJECTS,
+    practiceSections: [
+      { title: "Quality inspection", body: "Use this section to document the part features inspected, applicable drawing requirements, measurement instruments and methods, recorded results, and any follow-up work. Add only methods and results confirmed for a specific part." }
+    ],
+    documentationTopics: ["Part drawings and critical features", "CNC or manual machining setup", "Inspection plan and instrument selection", "Measurements, tolerances, and corrective actions"]
+  },
+  {
+    id: "small-engineering",
+    title: "Small Engineering Projects",
+    shortTitle: "Small engineering projects",
+    category: "Small Engineering",
+    tags: ["Small Engineering", "Mechanical Design", "Manufacturing"],
+    status: "Selected prototypes",
+    role: "Designer and builder",
+    cardSummary: "A selection of compact mechanisms, prototypes, and engineering builds.",
+    intro: "This collection brings together smaller engineering builds and prototypes, including an egg-drop device, gear mechanism, grabber, and hydraulic prototype.",
+    what: "Explore smaller mechanisms and prototypes that demonstrate hands-on engineering work across different scales and project contexts.",
+    how: "The selected photographs show the assembled mechanisms and prototypes. Individual project goals, design iterations, build steps, and test observations can be added as each project is documented.",
+    why: "Small builds provide a practical setting to explore mechanisms, assembly, and design choices. This page groups related projects while leaving room for each build to be documented in more depth.",
+    results: "Selected projects are shown below. Add project-specific outcomes only when they are documented.",
+    contribution: "These are selected personal and course or club engineering builds. Add individual roles and collaborators with each project record.",
+    tools: ["Mechanical design", "Prototyping", "Fabrication", "Assembly"],
+    considerations: ["Project objective", "Mechanism and motion", "Material and component choices", "Assembly and testing"],
+    images: window.SMALL_ENGINEERING_PROJECTS,
+    documentationTopics: ["Project objective and constraints", "CAD, sketches, or mechanism layout", "Build sequence and material choices", "Test setup and observations"]
+  },
+  {
+    id: "woodworking",
+    title: "Personal Woodworking Projects",
+    shortTitle: "Woodworking",
+    category: "Woodworking",
+    tags: ["Woodworking", "Manufacturing", "Personal Projects"],
+    status: "Selected builds",
+    role: "Independent projects",
+    cardSummary: "Selected personal builds, including a birdhouse, live-edge coffee table, and floor lamp.",
+    intro: "This collection presents selected independent woodworking builds. The photos show a birdhouse, a live-edge coffee table, and a wooden floor lamp.",
+    what: "Document personal woodworking projects and the decisions involved in making functional objects from wood.",
+    how: "The current gallery highlights completed pieces. Add drawings, dimensions, material details, process photographs, and finishing notes as those records are available.",
+    why: "Woodworking combines design decisions with material selection, measurement, fabrication, and finishing. This page provides space to document those choices for each build.",
+    results: "Three selected builds are pictured. Additional project details can be added below as they are documented.",
+    contribution: "Independent personal builds. Add project-specific responsibilities or collaborators alongside future documentation.",
+    tools: ["Woodworking", "Measurement", "Fabrication", "Finishing"],
+    considerations: ["Material selection", "Dimensions and fit", "Joinery and assembly", "Surface preparation and finish"],
+    images: window.PERSONAL_WOODWORKING_PROJECTS,
+    documentationTopics: ["Sketches, dimensions, or plans", "Wood species and material selection", "Build process and joinery", "Finishing details and final photographs"]
+  },
+  {
+    id: "ceramics",
+    title: "Ceramics Projects",
+    shortTitle: "Ceramics",
+    category: "Ceramics",
+    tags: ["Ceramics", "Personal Projects"],
+    status: "Documentation to add",
+    role: "Personal projects",
+    cardSummary: "A dedicated space for ceramic pieces, process photographs, and technique notes.",
+    intro: "This page is reserved for ceramic pieces and process documentation. Sonoma Art School workshop-assistant experience is listed separately under Education & Experience.",
+    what: "Build a visual record of selected ceramic pieces and the processes used to make them.",
+    how: "Add photographs and a short note for each piece as documentation becomes available. The prompts below provide a structure for recording the work.",
+    why: "A consistent record of form, technique, and finish makes it easier to present each piece and its making process.",
+    results: "Ceramics photographs and piece descriptions have not yet been added.",
+    contribution: "Add the maker's role and any collaborators or workshop context with each piece.",
+    tools: ["Ceramics", "Hands-on making"],
+    considerations: ["Form and intended use", "Technique and materials", "Surface and finish", "Photographs of the finished piece and process"],
+    images: window.CERAMICS_PROJECTS?.length ? window.CERAMICS_PROJECTS : [
+      { title: "Piece photographs", summary: "Add a finished-piece photograph and a brief description." },
+      { title: "Process documentation", summary: "Add process photographs and technique notes." },
+      { title: "Material and finish", summary: "Add material, surface, and finish details." }
+    ],
+    documentationTopics: ["Piece title and description", "Forming technique and materials", "Surface treatment and finish", "Finished-piece and process photographs"]
+  },
+  {
+    id: "coffee-kiosk",
+    title: "Cequin Coffee Kiosk Design & Build",
+    shortTitle: "Coffee kiosk",
+    category: "Product Development",
+    tags: ["Product Development", "Woodworking", "Manufacturing", "Personal Projects"],
+    status: "Built",
+    role: "Co-owner and project contributor",
+    cardSummary: "CAD concept, workshop fabrication, and completed kiosk for Cequin Coffee Company.",
+    intro: "This project documents the portable service kiosk developed for Cequin Coffee Company, from its CAD concept through workshop fabrication to the completed enclosure.",
+    what: "Develop and build a portable service kiosk for use by Cequin Coffee Company.",
+    how: "The selected images show the CAD concept, enclosure during fabrication, and completed kiosk. Add dimensions, design revisions, material choices, and setup details as they are documented.",
+    why: "The kiosk needed to serve a practical business use while being designed and built as a physical enclosure. This page leaves room to document its design and fabrication decisions.",
+    results: "A kiosk enclosure was built. Further specifications and operating details can be added when available.",
+    contribution: "This work was completed in the context of Cequin Coffee Company. Add specific individual and collaborator contributions with the process documentation.",
+    tools: ["CAD", "Woodworking", "Fabrication", "Product development"],
+    considerations: ["Service and event use", "Enclosure design", "Materials and fabrication", "Transport and setup"],
+    images: window.COFFEE_BUSINESS_PROJECTS,
+    documentationTopics: ["Design sketches and CAD iterations", "Dimensions and material choices", "Fabrication sequence", "Transport, setup, and use"]
+  }
+];
+
+collectionCaseStudies.forEach((project) => {
+  project.gallery = (project.images || []).map((image) => ({
+    label: image.title,
+    caption: image.summary,
+    alt: image.alt || image.title,
+    src: image.src,
+    fit: image.fit
+  }));
+  delete project.images;
+  window.PORTFOLIO_PROJECTS.push(project);
+});
+
+const documentationTopics = {
+  "baja-chassis": ["Frame layout and design documentation", "PVC prototype evaluation", "Fixture design and fabrication records", "Tube layout, notching, and fit-up observations"],
+  "tensile-tester": ["Part drawings and assembly", "Fabrication and instrumentation", "Test method and calibration", "Material test records and results"],
+  "wave-energy": ["System layout and design revisions", "Mechanical and electrical integration", "Ocean test setup", "Recorded observations and measurements"],
+  "rube-goldberg": ["Lesson plan and simple-machine materials", "Activity sequence and build guidance", "Non-identifying photographs", "Reflection and future lesson revisions"]
+};
+window.PORTFOLIO_PROJECTS.forEach((project) => {
+  if (documentationTopics[project.id]) project.documentationTopics = documentationTopics[project.id];
+});
+
+/* Add photos to the matching media group below. Captions also provide alt text. */
+const mediaPhoto = (folder, file, label, caption, fit = "cover", featured = false) => ({
+  label, caption, alt: caption, src: "assets/images/" + folder + "/" + file, fit, featured
+});
+const mediaGroup = (title, summary, gallery) => ({ title, summary, gallery });
+const images = (folder, rows) => rows.map(([file, label, caption, fit, featured]) => mediaPhoto(folder, file, label, caption, fit || "cover", Boolean(featured)));
+const projectById = Object.fromEntries(window.PORTFOLIO_PROJECTS.map((project) => [project.id, project]));
+
+const chassis = projectById["baja-chassis"];
+chassis.timelineStages = [
+  {
+    title: "Chassis design",
+    description: "Frame layout and design documentation establish the geometry and member arrangement for the Baja chassis.",
+    collections: [
+      mediaGroup("Frame layout and drawings", "CAD views and drawing references for the chassis design.", images("baja", [
+        ["chassis-side-view.webp", "Chassis side view", "SolidWorks chassis model shown from an angled side view.", "contain", true],
+        ["chassis-angles-dwg-1.webp", "Chassis angle drawing 1", "Engineering drawing documenting chassis tube angles.", "contain"],
+        ["chassis-angles-dwg-2.webp", "Chassis angle drawing 2", "Additional drawing views of chassis tube angles.", "contain"]
+      ])),
+    ]
+  },
+  {
+    title: "PVC ergonomics prototypes",
+    description: "Full-scale PVC mock-ups let the team review seating geometry, driver ergonomics, and egress before final chassis fabrication.",
+    collections: [mediaGroup("Prototype review", "Photos of the collaborative prototype work.", images("baja", [
+      ["pvc-group.webp", "PVC prototype team", "Team members gathered around the full-scale PVC chassis prototype.", "cover", true],
+      ["swe-pvc-2.webp", "PVC prototype 2", "A view of the SRJC SWE PVC chassis prototype work."],
+      ["swe-pvc-3.webp", "PVC prototype 3", "A second view of the SRJC SWE PVC chassis prototype work."],
+      ["swe-pvc-4.webp", "PVC prototype 4", "A third view of the SRJC SWE PVC chassis prototype work."]
+    ]))]
+  },
+  {
+    title: "Weld fixtures",
+    description: "Fixture design and fabrication support the positioning and assembly of chassis members.",
+    collections: [
+      mediaGroup("Fixture design and documentation", "CAD, part references, and fixture documentation.", images("baja", [
+        ["full-fixtures-CAD.webp", "Full fixture CAD assembly", "SolidWorks assembly of the chassis welding fixtures.", "contain", true],
+        ["fixtures-bom-1.webp", "Fixture bill of materials 1", "Fixture assembly component documentation, sheet 1.", "contain"],
+        ["fixtures-bom-2.webp", "Fixture bill of materials 2", "Fixture assembly component documentation, sheet 2.", "contain"],
+        ["fixtures-bom-3.webp", "Fixture bill of materials 3", "Fixture assembly component documentation, sheet 3.", "contain"],
+        ["fixtures-dxf.webp", "Fixture DXF", "DXF drawing used in fixture fabrication.", "contain"]
+      ])),
+      mediaGroup("Fixture fabrication and fit-up", "Workshop images show fixture setup and chassis component fit-up.", images("baja", [
+        ["cnc-mdf-2.webp", "CNC MDF fixture part", "CNC-cut MDF part used in chassis fixture work.", "contain"],
+        ["nose-box-fixtures-me.webp", "Nose box fixture", "Fixture setup for fitting the chassis nose box."],
+        ["nose-box-fitting.webp", "Nose box fit-up", "Chassis nose box being fitted during assembly."],
+        ["roll-hoop-fixturing.webp", "Roll hoop fixturing", "Roll hoop positioned in a workshop fixture."],
+        ["welders-set-up.webp", "Welding setup", "Workshop setup for chassis welding."],
+        ["welders-set-up-2.webp", "Welding setup 2", "Additional view of the chassis welding setup."]
+      ]))
+    ]
+  },
+  {
+    title: "Tube notching process",
+    description: "Tube identification, layout, and preparation support repeatable fit-up of chassis joints.",
+    collections: [
+      mediaGroup("Tube identification and layout", "Tube naming and unrolled layout records for chassis members.", images("baja", [
+        ["tube-naming-1.webp", "Tube naming 1", "Chassis tube naming reference, sheet 1.", "contain", true],
+        ["tube-naming-2.webp", "Tube naming 2", "Chassis tube naming reference, sheet 2.", "contain"],
+        ["tube-naming-3.webp", "Tube naming 3", "Chassis tube naming reference, sheet 3.", "contain"],
+        ["tube-naming-4.webp", "Tube naming 4", "Chassis tube naming reference, sheet 4.", "contain"],
+        ["tube-naming-5.webp", "Tube naming 5", "Chassis tube naming reference, sheet 5.", "contain"],
+        ["unrolled-tube-temp.webp", "Unrolled tube layout", "Unrolled layout template for a chassis tube.", "contain"]
+      ])),
+      mediaGroup("Tube preparation", "Workshop preparation of chassis tubing before fit-up.", images("baja", [
+        ["grinding-tubes.webp", "Tube grinding", "Chassis tubes being ground during preparation.", "cover", true]
+      ]))
+    ]
+  }
+];
+
+const machining = projectById["machining"];
+machining.mediaGroups = [
+  mediaGroup("CNC setup and CAD", "Machine operation and a CAD model from machining work.", images("machining", [
+    ["on-cnc.webp", "CNC mill", "A CNC milling machine during a machining project.", "cover", true],
+    ["candle-cad.webp", "Candle CAD model", "CAD model of a candle-shaped machined part.", "contain"]
+  ])),
+  mediaGroup("Machined features and operations", "Selected part features and a tapping setup.", images("machining", [
+    ["manual-plates-holes.webp", "Drilled plate", "Machined plate with a repeated hole pattern.", "cover", true],
+    ["tapping.webp", "Tapping operation", "Tapping tool positioned over a workpiece in a machine setup."]
+  ]))
+];
+
+projectById["coffee-kiosk"].mediaGroups = [
+  mediaGroup("Design concept", "CAD documentation for the Cequin Coffee kiosk.", images("coffee-business", [
+    ["cq-box-cad.webp", "Kiosk CAD", "CAD view of the Cequin Coffee service kiosk enclosure.", "contain", true]
+  ])),
+  mediaGroup("Fabrication", "The kiosk enclosure during workshop fabrication.", images("coffee-business", [
+    ["cq-box-in-shop.webp", "Kiosk in the shop", "Coffee kiosk enclosure during fabrication."],
+    ["cq-box-weld.webp", "Kiosk weld detail", "Welded detail from the coffee kiosk build."]
+  ])),
+  mediaGroup("Completed kiosk", "The finished coffee kiosk.", images("coffee-business", [
+    ["cq-box-done.webp", "Completed kiosk", "Completed wooden coffee kiosk ready for use.", "cover", true]
+  ]))
+];
+
+projectById["small-engineering"].mediaGroups = [
+  mediaGroup("Egg-drop device", "CAD, fabrication, and assembled views of the egg-drop build.", images("small-eng-side-projects", [
+    ["eggdrop-cad.webp", "Egg-drop CAD", "CAD model of the egg-drop device.", "contain"],
+    ["eggdrop-printing.webp", "Printing the egg-drop parts", "3D printing components for the egg-drop device."],
+    ["eggdrop-printed.webp", "Printed egg-drop parts", "Printed components for the egg-drop device."],
+    ["eggdrop-assembled.webp", "Assembled egg-drop device", "Assembled frame-based device for an egg-drop challenge.", "cover", true]
+  ])),
+  mediaGroup("Gear mechanism", "A compact mechanism and its support structure.", images("small-eng-side-projects", [
+    ["gears.webp", "Gear mechanism", "Compact gear mechanism mounted on a perforated support frame.", "cover", true]
+  ])),
+  mediaGroup("Grabber mechanism", "Open and closed views of the prototype grabber.", images("small-eng-side-projects", [
+    ["grabber-closed.webp", "Grabber closed", "Prototype grabber mechanism in the closed position."],
+    ["grabber-open.webp", "Grabber open", "Prototype grabber mechanism in the open position.", "cover", true]
+  ])),
+  mediaGroup("Hydraulic prototype", "A small hands-on hydraulic mechanism.", images("small-eng-side-projects", [
+    ["hydraulic-1.webp", "Hydraulic prototype", "Small hydraulic prototype made from wood, tubing, and mechanical components.", "cover", true]
+  ]))
+];
+
+projectById["woodworking"].mediaGroups = [
+  mediaGroup("Birdhouse", "Selected view of the completed birdhouse.", images("personal-woodworking", [
+    ["birdbox-3.webp", "Birdhouse", "Finished wooden birdhouse with a layered roof and slatted side details.", "cover", true]
+  ])),
+  mediaGroup("Buret", "Process and completed views of the buret project.", images("personal-woodworking", [
+    ["buret-proccess.webp", "Buret process", "Buret project during construction."],
+    ["buret-finished.webp", "Finished buret", "Completed wooden buret project.", "cover", true],
+    ["buret-on-wall.webp", "Buret on wall", "Completed buret shown mounted on a wall."]
+  ])),
+  mediaGroup("Coffee table", "Selected process and completed views of the live-edge coffee table.", images("personal-woodworking", [
+    ["coffee-table-1.webp", "Coffee table 1", "Early view of the live-edge coffee table build."],
+    ["coffee-table-5.webp", "Coffee table 5", "Progress view of the live-edge coffee table."],
+    ["coffee-table-9.webp", "Coffee table 9", "Later view of the live-edge coffee table build."],
+    ["coffee-table-11.webp", "Finished coffee table", "Finished live-edge coffee table with a broad natural wood top.", "cover", true],
+    ["coffee-table-win.webp", "Coffee table in use", "Live-edge coffee table shown in its finished setting."]
+  ])),
+  mediaGroup("Coffin build", "Construction stages and a fitting check for the coffin project.", images("personal-woodworking", [
+    ["coffin-process-1.webp", "Coffin process 1", "Early construction stage of the coffin project."],
+    ["coffin-process-2.webp", "Coffin process 2", "Intermediate construction stage of the coffin project."],
+    ["coffin-process-3.webp", "Coffin process 3", "Later construction stage of the coffin project."],
+    ["coffin-in-hearse-measure.webp", "Coffin fitting check", "Coffin measured in a hearse.", "cover", true]
+  ])),
+  mediaGroup("Floor lamp", "The wooden lamp and its finished setting.", images("personal-woodworking", [
+    ["lamp-1.webp", "Floor lamp", "Wooden floor lamp with a patterned front panel.", "cover", true],
+    ["lamp-win.webp", "Floor lamp in use", "Wooden floor lamp shown in its finished setting."]
+  ]))
+];
+
+projectById["sonoma-millworks"].mediaGroups = [
+  mediaGroup("Shop and team", "Selected photos from shop work and collaboration.", images("sonoma-millworks", [
+    ["smw-1.webp", "Sonoma Millworks 1", "Workshop photograph from Sonoma Millworks."],
+    ["smw-at-montage-me.webp", "At the montage", "Working on a montage project at Sonoma Millworks."],
+    ["smw-at-montage-working.webp", "Montage work", "Montage work in progress at Sonoma Millworks."],
+    ["smw-with-jennifer.webp", "Team photo", "Sonoma Millworks team members together.", "cover", true]
+  ])),
+  mediaGroup("Products and fabrication", "Selected custom wood products, showroom, and fabrication images.", images("sonoma-millworks", [
+    ["smw-at-montage-book.webp", "Montage book", "Book detail from a Sonoma Millworks montage project."],
+    ["smw-at-montage-leather.webp", "Montage leather", "Leather detail from a Sonoma Millworks montage project."],
+    ["smw-framing.webp", "Framing", "Framing work at Sonoma Millworks."],
+    ["smw-showroom.webp", "Showroom", "Custom wood products displayed in the Sonoma Millworks showroom."],
+    ["vino-plank-sprig-vases.webp", "VinoPlank Sprig Vases", "Sprig vases made from reclaimed wood.", "cover", true]
+  ]))
+];
+
+projectById["tensile-tester"].mediaGroups = [
+  mediaGroup("CAD assemblies and design records", "Assembly models and product data from the tensile tester design.", images("tensile-tester", [
+    ["TT-full-assembly-CAD.webp", "Full assembly CAD", "SolidWorks assembly of the tensile tester.", "contain", true],
+    ["TT-exploded-CAD.webp", "Exploded CAD view", "Exploded view of the tensile tester assembly.", "contain"],
+    ["TT-PDM.webp", "Product data management", "Product data management view for the tensile tester project.", "contain"],
+    ["top-plate-rev1-CAD.webp", "Top plate revision 1", "CAD model of the first top plate revision.", "contain"],
+    ["TT-pin-CAD.webp", "Pin CAD", "CAD model of a tensile tester pin.", "contain"],
+    ["TT-welded-top-plate-CAD.webp", "Welded top plate CAD", "CAD model of the welded tensile tester top plate.", "contain"]
+  ])),
+  mediaGroup("Part drawings", "Selected detail and assembly drawings.", images("tensile-tester", [
+    ["TT-base-dwg.webp", "Base drawing", "Engineering drawing of the tensile tester base.", "contain"],
+    ["TT-cap-plate-dwg.webp", "Cap plate drawing", "Engineering drawing of the cap plate.", "contain"],
+    ["TT-full-assembly-dwg.webp", "Assembly drawing", "Engineering drawing of the full tensile tester assembly.", "contain"],
+    ["TT-pin-dwg.webp", "Pin drawing", "Engineering drawing of a tensile tester pin.", "contain"],
+    ["TT-rod-dwg.webp", "Rod drawing", "Engineering drawing of a tensile tester rod.", "contain"],
+    ["TT-subassembly-dwg.webp", "Subassembly drawing", "Engineering drawing of a tensile tester subassembly.", "contain"],
+    ["TT-top-plate-dwg.webp", "Top plate drawing", "Engineering drawing of the tensile tester top plate.", "contain"]
+  ])),
+  mediaGroup("FEA studies", "Finite element analysis images from the design process.", images("tensile-tester", [
+    ["TT-FEA-1.webp", "FEA study 1", "Finite element analysis view from the tensile tester design."],
+    ["TT-FEA-2.webp", "FEA study 2", "Finite element analysis view from the tensile tester design.", "cover", true],
+    ["TT-FEA-3.webp", "FEA study 3", "Finite element analysis view from the tensile tester design."],
+    ["TT-FEA-4.webp", "FEA study 4", "Finite element analysis view from the tensile tester design."],
+    ["TT-FEA-5.webp", "FEA study 5", "Finite element analysis view from the tensile tester design."]
+  ])),
+  mediaGroup("Components and inspection", "Photos of components and inspection during development.", images("tensile-tester", [
+    ["TT-all-components.webp", "All components", "Tensile tester components laid out for inspection.", "cover", true],
+    ["TT-inspection.webp", "Inspection", "Tensile tester component inspection during development."],
+    ["TT-team-photo.webp", "Project team", "Team photograph from the tensile tester project."]
+  ]))
+];
+projectById["tensile-tester"].video = {
+  src: "assets/images/tensile-tester/TT-recording.MP4",
+  title: "Tensile tester recording",
+  caption: "Video documentation of the tensile tester. Add a description of the setup and observed operation when ready."
+};
+
+projectById["wave-energy"].mediaGroups = [
+  mediaGroup("CAD and design", "CAD assemblies, mechanism details, and design drawings.", images("wave-energy", [
+    ["htg-cad-1.webp", "Generator CAD", "CAD view of the wave energy generator.", "contain", true],
+    ["htg-assy-view-inside.webp", "Assembly interior CAD", "CAD view into the wave energy generator assembly.", "contain"],
+    ["htg-axle-cad.webp", "Axle CAD", "CAD model of the generator axle.", "contain"],
+    ["htg-cad-gears.webp", "Gear CAD", "CAD view of the wave energy gear arrangement.", "contain"],
+    ["htg-dimensions-cad.webp", "Dimensioned CAD", "Dimensioned CAD view of the wave energy generator.", "contain"],
+    ["htg-exploded-view.webp", "Exploded view", "Exploded CAD view of the generator assembly.", "contain"],
+    ["htg-motor-and-axle-cad.webp", "Motor and axle CAD", "CAD view of the motor and axle arrangement.", "contain"],
+    ["htg-spacer-cad.webp", "Spacer CAD 1", "CAD model of a wave energy generator spacer.", "contain"],
+    ["htg-spacer-cad-2.webp", "Spacer CAD 2", "Additional CAD view of a wave energy generator spacer.", "contain"]
+  ])),
+  mediaGroup("Prototype and mechanism", "Interior views and the welded support base.", images("wave-energy", [
+    ["htg-inside.webp", "Interior mechanism", "Internal view of the wave energy generator showing its mechanical components.", "cover", true],
+    ["htg-inside-side.webp", "Interior side view", "Side view of the generator interior and mechanism."],
+    ["htg-welded-base.webp", "Welded base", "Round welded frame supporting the wave energy prototype."]
+  ])),
+  mediaGroup("Ocean test and competition", "Field testing and competition documentation.", images("wave-energy", [
+    ["htg-working-in-ocean.webp", "Ocean test", "Wave energy prototype held in ocean water during a field test.", "cover", true],
+    ["htg-group-at-comp.webp", "Competition team", "Team group photograph at the competition."],
+    ["htg-podium.webp", "Competition podium", "Team members at the SkillsUSA California State Conference podium."],
+    ["htg-medals.webp", "Competition medals", "Medals from the SkillsUSA California State Conference."]
+  ]))
+];
+
+window.PORTFOLIO_PROJECTS.forEach((project) => {
+  if (project.timelineStages) {
+    project.timelineStages.forEach((stage) => {
+      stage.gallery = (stage.collections || []).flatMap((collection) => collection.gallery || []);
+    });
+    project.gallery = project.timelineStages.flatMap((stage) => stage.gallery);
+  } else if (project.mediaGroups) {
+    project.gallery = project.mediaGroups.flatMap((group) => group.gallery || []);
+  }
+});

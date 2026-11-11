@@ -15,7 +15,7 @@ Then open <http://localhost:8000>. Press `Ctrl+C` in PowerShell to stop the serv
 ## Project layout
 
 ```text
-index.html                 Home, Engineering Projects, Manufacturing & Fabrication, Technical Skills, Education & Experience, Additional Projects, Resume, Contact
+index.html                 Home, Projects, Manufacturing & Fabrication, Technical Skills, Education & Experience, Resume, Contact
 project.html               Reusable individual project detail page
 assets/
   css/site.css             Visual system, responsive layouts, and print styles
@@ -31,19 +31,19 @@ assets/
 
 1. Open `assets/js/projects.js` and add an object to `window.PORTFOLIO_PROJECTS` (or edit an existing one).
 2. Give it a unique `id`, a `title`, `shortTitle`, `category`, `tags`, `status`, and `cardSummary`.
-3. Fill in `intro`, `what`, `how`, `why`, `results`, and `contribution`. Keep results and personal contributions specific to what happened.
+3. Fill in `intro`, `what`, `how`, `why`, `results`, and `contribution`. Keep results and personal contributions specific to what happened. For room to expand a case study, add a `documentationTopics` array; its entries appear below the project gallery as a reminder of useful records to add.
 4. Add `tools` and `considerations` arrays for the technical highlights.
 5. Add a `gallery` array for image slots. Each item can include a `label`, `caption`, `alt`, and `folder`. Add `src` with the image path to display a photo. Entries appear in the order listed.
 
-Project cards are created from this data, and `project.html?id=your-project-id` renders the matching detail page. Use one or more exact filter tags: `Mechanical Design`, `CAD / FEA`, `Manufacturing`, `Renewable Energy`, `Product Development`, or `Engineering Outreach`.
+Project cards are created from this data, and `project.html?id=your-project-id` renders the matching detail page. Use one or more exact filter tags: `Mechanical Design`, `CAD / FEA`, `Manufacturing`, `Quality Inspection`, `Renewable Energy`, `Product Development`, `Engineering Outreach`, `Small Engineering`, `Woodworking`, `Ceramics`, or `Personal Projects`.
 
 ## Image privacy and publishing policy
 
 Images below `assets/images/` must be `.webp` files with no embedded EXIF, XMP, or ICC profile chunks. This removes common camera details such as GPS location, device data, timestamps, and author fields. It does not remove information that is visible in the image itself.
 
-Original `.JPG`, `.JPEG`, `.PNG`, and `.HEIC` files are kept locally under `.image-sources/`, which is ignored by Git. Only the converted WebP copies are included in the published image folders. `.MOV` and `.MP4` videos stay in their folders on your computer and are ignored by Git and the image check.
+Original `.JPG`, `.JPEG`, `.PNG`, and `.HEIC` files are kept locally under `.image-sources/`, which is ignored by Git. Published project photos are WebP. The tensile tester recording `assets/images/tensile-tester/TT-recording.MP4` is included as a video exception; other `.MOV` and `.MP4` videos stay local and are ignored by Git.
 
-The repository includes an automated policy check at `.github/workflows/image-policy.yml`. It runs whenever changes are pushed or proposed for `main`, and rejects non-WebP images or files with the blocked metadata chunks. `.MOV` and `.MP4` video files are ignored by the image check. GitHub branch protection can make this check required before a pull request is merged; it cannot prevent someone from committing a file locally.
+The repository includes an automated policy check at `.github/workflows/image-policy.yml`. It runs whenever changes are pushed or proposed for `main`, and rejects non-WebP images or files with the blocked metadata chunks. Video files are skipped by the image check.
 
 To prepare a photo with ImageMagick, make a published copy rather than overwriting your original:
 
@@ -72,63 +72,34 @@ Use this example to add a photo to the Baja chassis project:
    ```
 
    Keep your original photo; the command writes a separate WebP copy. Replace `my-chassis-photo.jpg` with the name and path of your own photo.
-2. Open `assets/js/projects.js` and find the `baja-chassis` project's `gallery` list.
-3. In the gallery slot you want to use, add a `src` line with the path to the WebP file. For example, change the first slot to:
+2. Open `assets/js/projects.js` and find the matching Chassis timeline stage and photo group.
+3. Add a row to that group's `images("baja", [...])` list. For example:
 
    ```js
-   {
-     label: "Full chassis CAD assembly",
-     caption: "SolidWorks assembly of the Baja chassis.",
-     alt: "SolidWorks model showing the Baja chassis frame from an angled view",
-     folder: "assets/images/baja/",
-     src: "assets/images/baja/chassis-side-view.webp"
-   }
+   ["chassis-side-view.webp", "Chassis side view", "SolidWorks chassis model shown from an angled side view.", "contain", true]
    ```
 
-   Keep the `src` path and filename exactly the same as the file you saved. Write `alt` as a short description of what someone can see in the image. The `folder` line only labels the placeholder; `src` is what displays the photo.
-4. Save `projects.js` and refresh the project page. The gallery slot will show the photo and open a larger view when clicked.
+   Use the exact filename, a short label, and a caption describing the image. The caption is also used as its alt text. `"contain"` keeps drawings fully visible, and the final `true` highlights an important image. Omit the last two values when they are not needed.
+4. Save `projects.js` and refresh the project page. Images appear in the selected timeline stage and open at full size when clicked.
 
-Use the matching folder for other projects: for example, `assets/images/ceramics/` for ceramics or `assets/images/personal-woodworking/` for personal woodworking. Move gallery entries in the array to change their order; add or remove entries to change the number of slots.
+For project galleries, edit the matching `mediaGroup(...)` near the bottom of `assets/js/projects.js`. Each photo row contains its filename, label, caption, optional fit (`"contain"` for drawings), and optional featured flag. For example:
+
+```js
+["new-chassis-view.webp", "Chassis view", "Describe what this drawing or photo shows.", "contain", true]
+```
+
+Chassis images are organized under `chassis.timelineStages` in chronological order. Add a new `mediaGroup` to a stage or collection to make a separate gallery; add photos to an existing group's `images(...)` list to extend it. Captions are also used as image alt text. Use the matching asset folder name in the `images("baja", [...])` call.
 
 Available folders: `profile`, `baja`, `wave-energy`, `tensile-tester`, `sonoma-millworks`, `personal-woodworking`, `ceramics`, `rube-goldberg`, `coffee-business`, `machining`, `small-eng-side-projects`, and `general`. No stock project photos are included. Before publishing classroom photos, confirm that publication is appropriate and avoid identifiable student images without permission.
 
 The Home section uses the Baja chassis side-view image as its featured image. To change it, update the image `src` in the Home section of `index.html`.
 
-## Add personal woodworking projects
+## Personal project pages
 
-The **Additional Projects** section includes personal woodworking builds; Sonoma Millworks stays listed under Manufacturing & Fabrication and Education & Experience. Add entries to `window.PERSONAL_WOODWORKING_PROJECTS` in `assets/js/projects.js`:
+The Projects list includes detailed pages for small engineering projects, personal woodworking, ceramics, the Cequin Coffee kiosk, machining, and the tensile tester. Their photo groups are under `projectById[...]` near the bottom of `assets/js/projects.js`; ceramics entries are in `window.CERAMICS_PROJECTS`. The Chassis page groups Baja images into a four-step timeline. Each case study also has prompts for future documentation.
 
-```js
-window.PERSONAL_WOODWORKING_PROJECTS = [
-  {
-    title: "Project title",
-    summary: "What you made and the choices or process you want to document.",
-    materials: "Materials to list",
-    src: "assets/images/personal-woodworking/project-photo.webp",
-    alt: "Describe what is shown in the photograph"
-  }
-];
-```
+Sonoma Millworks remains under Manufacturing & Fabrication and Education & Experience. Sonoma Art School workshop-assistant experience remains under Education & Experience.
 
-Add photos to `assets/images/personal-woodworking/`. The `src` field is optional; without it, the project card uses an illustrative graphic. Add another object to the array for each build. The section displays a setup message until the first project is added.
-
-## Add ceramics work
-
-The ceramics group in **Additional Projects** is separate from the Sonoma Art School workshop-assistant experience. Add each piece to `window.CERAMICS_PROJECTS` in `assets/js/projects.js`:
-
-```js
-window.CERAMICS_PROJECTS = [
-  {
-    title: "Piece title",
-    summary: "A short description of the piece.",
-    technique: "Technique or materials to note",
-    src: "assets/images/ceramics/piece-photo.webp",
-    alt: "Describe what is shown in the photograph"
-  }
-];
-```
-
-Add photos to `assets/images/ceramics/`. The `src` field is optional; without it, the card uses an illustrative graphic. Add another object for each piece. The section displays a setup message until a piece is added.
 
 ## Update skills, experience, and contact information
 

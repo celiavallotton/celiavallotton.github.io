@@ -3,3 +3,4 @@ assets/images/**/*.MOV
 assets/images/**/*.mov
 assets/images/**/*.MP4
 assets/images/**/*.mp4
+!assets/images/tensile-tester/TT-recording.MP4

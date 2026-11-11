@@ -3,13 +3,13 @@
     "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"
   })[char]);
   const projectList = window.PORTFOLIO_PROJECTS || [];
-  const priority = ["tensile-tester", "weld-fixture", "baja-chassis", "tube-notching", "wave-energy", "rube-goldberg"];
-  const engineeringProjects = projectList.filter((project) => project.showInEngineering !== false).sort((a, b) => {
+  const priority = ["baja-chassis", "tensile-tester", "machining", "small-engineering", "ceramics", "woodworking", "coffee-kiosk", "wave-energy", "rube-goldberg"];
+  const projects = projectList.filter((project) => project.showInEngineering !== false).sort((a, b) => {
     const ai = priority.indexOf(a.id);
     const bi = priority.indexOf(b.id);
     return (ai < 0 ? priority.length : ai) - (bi < 0 ? priority.length : bi);
   });
-  const categories = ["Mechanical Design", "CAD / FEA", "Manufacturing", "Renewable Energy", "Product Development", "Engineering Outreach"];
+  const categories = ["Mechanical Design", "CAD / FEA", "Manufacturing", "Quality Inspection", "Renewable Energy", "Product Development", "Engineering Outreach", "Small Engineering", "Woodworking", "Ceramics", "Personal Projects"];
   const grid = document.getElementById("project-grid");
   const filters = document.getElementById("project-filters");
 
@@ -22,7 +22,7 @@
 
   function renderCards(activeCategory) {
     if (!grid) return;
-    const visibleProjects = engineeringProjects.filter((project) => activeCategory === "All" || project.tags.includes(activeCategory));
+    const visibleProjects = projects.filter((project) => activeCategory === "All" || project.tags.includes(activeCategory));
     grid.innerHTML = visibleProjects.map((project) =>
       '<article class="project-card">' +
         '<a class="project-card-link" href="project.html?id=' + encodeURIComponent(project.id) + '" aria-label="View ' + escapeHtml(project.title) + ' project details">' +
@@ -90,20 +90,6 @@
   })));
   renderCollection("machining-grid", window.MACHINING_PROJECTS || []);
   renderCollection("fabrication-grid", window.FABRICATION_PROJECTS || []);
-  renderCollection("coffee-business-grid", window.COFFEE_BUSINESS_PROJECTS || []);
-  renderCollection("side-projects-grid", window.SMALL_ENGINEERING_PROJECTS || []);
-  renderCollection("woodworking-grid", window.PERSONAL_WOODWORKING_PROJECTS || []);
-
-  const ceramicsGrid = document.getElementById("ceramics-grid");
-  const ceramicsProjects = window.CERAMICS_PROJECTS || [];
-  if (ceramicsGrid) {
-    if (ceramicsProjects.length) {
-      renderCollection("ceramics-grid", ceramicsProjects);
-    } else {
-      ceramicsGrid.innerHTML = '<p class="collection-note">No ceramics photographs have been added yet. Sonoma Art School experience is listed under Education &amp; Experience.</p>';
-    }
-  }
-
   const menuButton = document.querySelector(".menu-toggle");
   const nav = document.getElementById("primary-nav");
   if (menuButton && nav) {
