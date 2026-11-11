@@ -54,7 +54,12 @@
   const tools = project.tools?.length
     ? '<ul>' + project.tools.map((item) => '<li>' + esc(item) + '</li>').join("") + '</ul>'
     : "";
-  const sequence = projects.filter((item) => item.showInEngineering !== false);
+  const projectPriority = ["tensile-tester", "weld-fixture", "baja-chassis", "tube-notching", "wave-energy", "rube-goldberg"];
+  const sequence = projects.filter((item) => item.showInEngineering !== false).sort((a, b) => {
+    const ai = projectPriority.indexOf(a.id);
+    const bi = projectPriority.indexOf(b.id);
+    return (ai < 0 ? projectPriority.length : ai) - (bi < 0 ? projectPriority.length : bi);
+  });
   const index = sequence.indexOf(project);
   let navigation = "";
   if (index >= 0 && sequence.length > 1) {

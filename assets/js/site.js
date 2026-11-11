@@ -1,9 +1,9 @@
-﻿(function () {
+(function () {
   const escapeHtml = (value) => String(value).replace(/[&<>"']/g, (char) => ({
     "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"
   })[char]);
   const projectList = window.PORTFOLIO_PROJECTS || [];
-  const priority = ["baja-chassis", "wave-energy", "rube-goldberg"];
+  const priority = ["tensile-tester", "weld-fixture", "baja-chassis", "tube-notching", "wave-energy", "rube-goldberg"];
   const engineeringProjects = projectList.filter((project) => project.showInEngineering !== false).sort((a, b) => {
     const ai = priority.indexOf(a.id);
     const bi = priority.indexOf(b.id);

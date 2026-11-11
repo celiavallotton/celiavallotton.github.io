@@ -16,17 +16,62 @@ window.PORTFOLIO_PROJECTS = [
     cardSummary: "Chassis and roll cage development for the SRJC Baja SAE vehicle, balancing structural design, driver needs, packaging, and fabrication constraints.",
     intro: "Since August 2025, I have served as Chassis Lead for the Santa Rosa Junior College Baja SAE team. The work brings together structural geometry, driver safety and ergonomics, component packaging, manufacturing, and competition requirements.",
     what: "Develop a tubular vehicle chassis and roll cage intended to meet Baja SAE technical requirements while integrating with the team's vehicle systems. Chassis design and vehicle development are ongoing; no competition result or technical inspection outcome is claimed here.",
-    how: "I developed the chassis and roll cage in SolidWorks and conducted SolidWorks Simulation FEA to evaluate loading and stress concentrations from predicted impacts. I designed and fabricated chassis welding fixtures and developed tube-notching processes. I also led a collaborative team of SRJC Society of Women Engineers members through the design and fabrication of a full-scale PVC chassis prototype to evaluate seating geometry, pedal positioning, driver ergonomics, and egress. Current design work also considers firewall geometry, mounting locations, body-panel attachment, reinforcement, and gusset placement.",
+    how: "I developed the chassis and roll cage in SolidWorks and conducted SolidWorks Simulation FEA to evaluate loading and stress concentrations from predicted impacts. I also led a collaborative SRJC Society of Women Engineers team through the design and fabrication of a full-scale PVC chassis prototype to evaluate seating geometry, driver ergonomics, and egress. Current design work considers firewall geometry, mounting locations, body-panel attachment, reinforcement, and gusset placement. Fixture design and tube-notching process work are documented in their own case studies.",
     why: "A chassis has to satisfy competing needs at once: structural requirements, driver safety and ergonomics, weight, packaging, accessibility, manufacturability, and competition rules. Joint geometry and member placement affect both the design and the practical work of cutting, fitting, and assembling 4130 chromoly tubing.",
     results: "The team designed and fabricated a full-scale PVC chassis prototype to evaluate driver ergonomics. Chassis development remains in progress; this prototype does not represent final vehicle fabrication, competition, or technical inspection.",
-    contribution: "I led chassis subsystem design, designed and fabricated welding fixtures, developed tube-notching processes, conducted SolidWorks Simulation FEA, and led a collaborative team through the PVC chassis prototype work. Chassis design is coordinated with other vehicle subteams.",
-    tools: ["SolidWorks", "SolidWorks Simulation FEA", "4130 chromoly steel tubing", "PVC chassis prototype", "Welding fixtures", "Tube notching"],
-    considerations: ["Roll cage geometry", "Primary and secondary structural members", "Tube notching and joint design", "Driver interface and ergonomics", "Component mounting and packaging", "Structural analysis", "Manufacturing and assembly", "Baja SAE technical requirements"],
+    contribution: "I lead chassis subsystem design and conduct SolidWorks Simulation FEA. I also led a collaborative team through PVC chassis prototype work. Chassis design is coordinated with other vehicle subteams.",
+    tools: ["SolidWorks", "SolidWorks Simulation FEA", "4130 chromoly steel tubing", "PVC chassis prototype"],
+    considerations: ["Roll cage geometry", "Primary and secondary structural members", "Driver ergonomics", "Component mounting and packaging", "Structural analysis", "Manufacturing and assembly", "Baja SAE technical requirements"],
     gallery: [
       { label: "Chassis side view", caption: "SolidWorks model of the Baja chassis frame in an angled side view.", alt: "Angled side view of a tubular Baja chassis frame in SolidWorks.", fit: "contain", folder: "assets/images/baja/", src: "assets/images/baja/chassis-side-view.webp" },
-      { label: "Chassis fixture CAD", caption: "SolidWorks assembly showing the chassis welding fixtures.", alt: "CAD model of welding fixtures arranged around a tubular Baja chassis.", fit: "contain", folder: "assets/images/baja/", src: "assets/images/baja/full-fixtures-CAD.webp" },
       { label: "Ergonomics prototype", caption: "Full-scale PVC prototype used to assess seating and driver access.", alt: "Full-scale PVC chassis ergonomics prototype with a plywood floor panel.", folder: "assets/images/baja/", src: "assets/images/baja/plywood-ergo.webp" },
-      { label: "Roll hoop weld fixture", caption: "Fixture prepared to hold the roll hoop during fabrication.", alt: "Roll hoop positioned in a wooden welding fixture in the workshop.", folder: "assets/images/baja/", src: "assets/images/baja/roll-hoop-fixturing.webp" }
+      { label: "Chassis angles", caption: "Drawing views used during chassis design.", alt: "Engineering drawing views of chassis tube angles.", fit: "contain", folder: "assets/images/baja/", src: "assets/images/baja/chassis-angles-dwg-1.webp" }
+    ]
+  },
+  {
+    id: "weld-fixture",
+    title: "Baja SAE Weld Fixture Design & Fabrication",
+    shortTitle: "Weld fixture",
+    category: "Manufacturing",
+    tags: ["Manufacturing", "Mechanical Design", "CAD / FEA"],
+    status: "Designed and fabricated",
+    role: "Fixture designer and fabricator",
+    cardSummary: "Fixture CAD, fabrication planning, and workshop photos documenting supports made for chassis welding.",
+    intro: "I designed and fabricated welding fixtures for the SRJC Baja SAE chassis work. This case study focuses on tooling used to position and support chassis components during fabrication.",
+    what: "Develop welding fixtures to support chassis fabrication and hold components in position during welding.",
+    how: "I designed the fixture assembly in SolidWorks, prepared fixture components, and fabricated the supports used in the workshop. The images show the CAD assembly, fixture documentation, and roll hoop setup.",
+    why: "Purpose-built fixtures help locate and support components during fabrication. Fixture design has to suit the parts being joined and the practical space and access available during welding.",
+    results: "Welding fixtures were designed and fabricated for the chassis work. No dimensional accuracy or measured production results are claimed.",
+    contribution: "I designed and fabricated the chassis welding fixtures.",
+    tools: ["SolidWorks", "Fixture design", "Welding", "Workshop fabrication"],
+    considerations: ["Part location and support", "Assembly access", "Fabrication sequence", "Fixture documentation"],
+    gallery: [
+      { label: "Fixture CAD assembly", caption: "SolidWorks assembly showing fixtures positioned around the chassis.", alt: "CAD model of welding fixtures arranged around a tubular Baja chassis.", fit: "contain", folder: "assets/images/baja/", src: "assets/images/baja/full-fixtures-CAD.webp" },
+      { label: "Fixture bill of materials", caption: "Fixture component documentation.", alt: "Bill of materials for components in the chassis welding fixture assembly.", fit: "contain", folder: "assets/images/baja/", src: "assets/images/baja/fixtures-bom-total.webp" },
+      { label: "Roll hoop setup", caption: "Roll hoop positioned in its fabrication fixture.", alt: "Roll hoop positioned in a wooden welding fixture in the workshop.", folder: "assets/images/baja/", src: "assets/images/baja/roll-hoop-fixturing.webp" }
+    ]
+  },
+  {
+    id: "tube-notching",
+    title: "Baja SAE Tube Notching Process",
+    shortTitle: "Tube notching process",
+    category: "Manufacturing",
+    tags: ["Manufacturing", "Mechanical Design"],
+    status: "Process developed",
+    role: "Chassis Lead",
+    cardSummary: "Tube preparation workflow developed to support fit-up and fabrication of the tubular chassis.",
+    intro: "I developed tube-notching processes as part of SRJC Baja SAE chassis fabrication. This case study brings together tube-layout documentation and workshop images related to preparing chassis members for fit-up.",
+    what: "Prepare tubular chassis members for fit-up and assembly using a repeatable notching workflow.",
+    how: "The available documentation shows tube naming and layout work alongside preparation, grinding, and deburring steps. Further process settings and measured fit-up results can be added as they are documented.",
+    why: "Tube ends need to fit adjoining members at the intended joint locations. Consistent layout and preparation support assembly and welding of a tubular chassis.",
+    results: "Tube-notching processes were developed for the chassis work. No tolerances or production rates are claimed.",
+    contribution: "I developed tube-notching processes for the SRJC Baja SAE chassis project.",
+    tools: ["Tube layout", "Tube notching", "Grinding", "Deburring", "4130 chromoly steel tubing"],
+    considerations: ["Tube identification and orientation", "Joint fit-up", "Preparation sequence", "Consistency across chassis members"],
+    gallery: [
+      { label: "Tube identification", caption: "Tube naming documentation used during chassis work.", alt: "Chassis tube naming diagram used to identify frame members.", fit: "contain", folder: "assets/images/baja/", src: "assets/images/baja/tube-naming-1.webp" },
+      { label: "Tube layout", caption: "Unrolled tube layout documentation.", alt: "Unrolled layout for a chassis tube.", fit: "contain", folder: "assets/images/baja/", src: "assets/images/baja/unrolled-tube-temp.webp" },
+      { label: "Tube preparation", caption: "Grinding and deburring operations during chassis tube preparation.", alt: "Chassis tubes being prepared in the workshop.", folder: "assets/images/baja/", src: "assets/images/baja/deburring-tubes.webp" }
     ]
   },
   {
@@ -99,28 +144,6 @@ window.PORTFOLIO_PROJECTS = [
       { label: "Machine CAD model", caption: "SolidWorks assembly of the tensile tester.", alt: "CAD assembly of a vertical tensile tester with its frame, grips, and drive components.", fit: "contain", folder: "assets/images/tensile-tester/", src: "assets/images/tensile-tester/TT-full-assembly-CAD.webp" },
       { label: "FEA study", caption: "Finite element analysis view from the machine design process.", alt: "FEA visualization of stress distribution in a tensile tester component.", fit: "contain", folder: "assets/images/tensile-tester/", src: "assets/images/tensile-tester/TT-FEA-2.webp" },
       { label: "Component layout", caption: "Components arranged for inspection during machine development.", alt: "Tensile tester components laid out on a work surface for inspection.", folder: "assets/images/tensile-tester/", src: "assets/images/tensile-tester/TT-all-components.webp" }
-    ]
-  },
-  {
-    id: "pedal-box",
-    title: "Pedal Box & Driver Interface Design",
-    shortTitle: "Pedal box & driver interface",
-    category: "Mechanical Design",
-    tags: ["Mechanical Design", "CAD / FEA", "Product Development"],
-    status: "Concept Development",
-    role: "Baja SAE chassis subsystem",
-    cardSummary: "Developing brake, throttle, and driver-interface concepts within Baja chassis packaging and integration constraints.",
-    intro: "This developing Baja SAE project focuses on the pedal box and driver interface as part of the chassis design. The work considers ergonomics, packaging, mounting, and coordination with other vehicle systems.",
-    what: "Develop brake and throttle interface concepts that can integrate with the chassis and accommodate the vehicle's driver-interface needs.",
-    how: "The concepts are considered alongside chassis geometry and require coordination with the steering and powertrain subteams. Design development is ongoing; final geometry and test results are not represented as complete.",
-    why: "Pedal position and mounting affect driver ergonomics, available packaging, and integration with nearby chassis and vehicle components. Changes need to be considered in the context of the broader vehicle layout.",
-    results: "Concept development is ongoing. Add the current design and integration status as the work progresses.",
-    contribution: "This work is part of my Baja SAE chassis responsibilities. I am developing pedal-box and driver-interface concepts and considering their chassis integration in coordination with other subteams.",
-    tools: ["SolidWorks", "Driver-interface concepts", "Chassis integration"],
-    considerations: ["Brake and throttle interface", "Driver ergonomics", "Packaging constraints", "Mounting considerations", "Chassis integration", "Steering and powertrain coordination"],
-    gallery: [
-      { label: "Pedal box concept", caption: "Add a current CAD concept or layout.", alt: "Placeholder for pedal box CAD concept", folder: "assets/images/baja/" },
-      { label: "Driver packaging", caption: "Add a layout view showing packaging and interface considerations.", alt: "Placeholder for driver interface packaging view", folder: "assets/images/baja/" }
     ]
   },
   {
