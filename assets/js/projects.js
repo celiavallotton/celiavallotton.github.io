@@ -14,7 +14,7 @@ window.PORTFOLIO_PROJECTS = [
     role: "Chassis Lead",
     dates: "August 2025-Present",
     cardSummary: "Chassis and roll cage design and fabrication for the SRJC Baja SAE vehicle, from a vision in Solidworks, our first prototpe, and the start of fabrication.",
-    intro: "Since August 2025, I have served as Chassis Lead for the Santa Rosa Junior College Baja SAE team. My tasks thus far have included design on the chassis and roll cage in SolidWorks, conducting SolidWorks Simulation FEA to evaluate loading and stress concentrations, and leading a collaborative team through the design and fabrication of a full-scale PVC chassis prototype to evaluate seating geometry, driver ergonomics, and egress. Now I am coordinating the fabrication of the roll cage including making welding fixtures and tube notching.",
+    intro: "Since August 2025, I have served as Chassis Lead for the Santa Rosa Junior College Baja SAE team. My tasks thus far have included design of the chassis and roll cage in SolidWorks, conducting SolidWorks Simulation FEA to evaluate loading and stress concentrations, and leading a collaborative team through the design and fabrication of a full-scale PVC chassis prototype to evaluate seating geometry, driver ergonomics, and egress. Now I am coordinating the fabrication of the roll cage including making welding fixtures and tube notching.",
     what: "Develop a chassis and roll cage intended to meet Baja SAE technical requirements while integrating with the team's vehicle systems. Chassis design and vehicle development are ongoing; no competition result or technical inspection outcome is claimed here.",
     how: "I developed the chassis and roll cage in SolidWorks and led a collaborative SRJC Society of Women Engineers team through the design and fabrication of a full-scale PVC chassis prototype to evaluate seating geometry, driver ergonomics, and egress. The welders on our SRJC Baja SAE team are now in the proccess of welding the chassis I have designed. Current design work considers firewall geometry, mounting locations, body-panel attachment, reinforcement, and gusset placement. The timeline below groups chassis design, PVC prototyping, welding fixtures, and tube preparation into one project sequence.",
     why: "An effective Baja SAE chassis has to satisfy structural requirements, driver safety and ergonomics, weight, packaging, manufacturability, and competition rules. Joint geometry and member placement affect the design, fabrication and assembling of 4130 chromoly tubing & reinforcement tubes made of 1020 steel.",
@@ -27,6 +27,7 @@ window.PORTFOLIO_PROJECTS = [
       { label: "Ergonomics prototype", caption: "Full-scale PVC prototype used to assess seating and driver access.", alt: "Full-scale PVC chassis ergonomics prototype with a plywood floor panel.", folder: "assets/images/baja/", src: "assets/images/baja/plywood-ergo.webp" },
       { label: "Chassis angles", caption: "Drawing views used during chassis design.", alt: "Engineering drawing views of chassis tube angles.", fit: "contain", folder: "assets/images/baja/", src: "assets/images/baja/chassis-angles-dwg-1.webp" }
     ]
+    /*Still need to fix the labels for Baja */
   },
   {
     id: "wave-energy",
@@ -334,7 +335,7 @@ chassis.timelineStages = [
     collections: [
       mediaGroup("Frame layout and drawings", "CAD views and drawing references for the chassis design.", images("baja", [
         ["chassis-side-view.webp", "Chassis side view", "SolidWorks chassis model shown from an angled side view.", "contain", true],
-        ["chassis-angles-dwg-1.webp", "Chassis angle drawing 1", "Engineering drawing documenting chassis tube angles.", "contain"],
+        ["chassis-angles-dwg-1.webp", "Chassis angle drawing 1", "Engineering drawing made for angles of the chassis to be welded.", "contain"],
         ["chassis-angles-dwg-2.webp", "Chassis angle drawing 2", "Additional drawing views of chassis tube angles.", "contain"]
       ])),
     ]
@@ -343,22 +344,22 @@ chassis.timelineStages = [
     title: "PVC ergonomics prototypes",
     description: "Full-scale PVC mock-ups let the team review seating geometry, driver ergonomics, and egress before final chassis fabrication.",
     collections: [mediaGroup("Prototype review", "Photos of the collaborative prototype work.", images("baja", [
-      ["pvc-group.webp", "PVC prototype team", "Team members gathered around the full-scale PVC chassis prototype.", "cover", true],
-      ["swe-pvc-2.webp", "PVC prototype 2", "A view of the SRJC SWE PVC chassis prototype work."],
-      ["swe-pvc-3.webp", "PVC prototype 3", "A second view of the SRJC SWE PVC chassis prototype work."],
-      ["swe-pvc-4.webp", "PVC prototype 4", "A third view of the SRJC SWE PVC chassis prototype work."]
+      ["pvc-group.webp", "Members of the PVC prototype team", "Team members gathered around the full-scale PVC chassis prototype.", "cover", true],
+      ["swe-pvc-2.webp", "Explaining the process to members of SWE", "A view of the SRJC SWE PVC chassis prototype work."],
+      ["swe-pvc-3.webp", "Cutting the first tubes", "Testing the joint fitup using a unrolled tube template."],
+      ["swe-pvc-4.webp", "Getting more members involved", "More members of SWE participating in the PVC prototype work."]
     ]))]
   },
   {
     title: "Weld fixtures",
-    description: "Fixture design and fabrication support the positioning and assembly of chassis members.",
+    description: "Fixture design and fabrication to support the positioning and assembly of chassis members. The fixtures are designed in three parts: nose box, middle members, and rear bracing. This was designed in consideration of the welding sequence. Additionally I ensured that every tube was being supported by at least 2 points of contact for straight members, and 3 for bent members. This was to ensure that the tubes were being held in place and not moving during the assembly and welding process. Tight tolerances were included in the MDF fitup to ensure a rigid design, but a generous amount of clearance was included in the steel tube fitup. This allowed for small adjustments that were necessary for proper assembly.",
     collections: [
       mediaGroup("Fixture design and documentation", "CAD, part references, and fixture documentation.", images("baja", [
         ["full-fixtures-CAD.webp", "Full fixture CAD assembly", "SolidWorks assembly of the chassis welding fixtures.", "contain", true],
         ["fixtures-bom-1.webp", "Fixture bill of materials 1", "Fixture assembly component documentation, sheet 1.", "contain"],
         ["fixtures-bom-2.webp", "Fixture bill of materials 2", "Fixture assembly component documentation, sheet 2.", "contain"],
         ["fixtures-bom-3.webp", "Fixture bill of materials 3", "Fixture assembly component documentation, sheet 3.", "contain"],
-        ["fixtures-dxf.webp", "Fixture DXF", "DXF drawing used in fixture fabrication.", "contain"]
+        ["fixtures-dxf.webp", "Fixture DXF", "DXF drawing used in fixture fabrication, optimized for maximum usable scrap material, and cut from a CNC woodrouter.", "contain"]
       ])),
       mediaGroup("Fixture fabrication and fit-up", "Workshop images show fixture setup and chassis component fit-up.", images("baja", [
         ["cnc-mdf-2.webp", "CNC MDF fixture part", "CNC-cut MDF part used in chassis fixture work.", "contain"],
@@ -386,6 +387,7 @@ chassis.timelineStages = [
         ["grinding-tubes.webp", "Tube grinding", "Chassis tubes being ground during preparation.", "cover", true]
       ]))
     ]
+    /* Finish tube notching process edits*/
   }
 ];
 
