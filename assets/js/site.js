@@ -1,6 +1,9 @@
 (function () {
   const themeToggles = document.querySelectorAll(".theme-toggle");
-  const savedTheme = localStorage.getItem("portfolio-theme");
+  let savedTheme = "light";
+  try {
+    savedTheme = localStorage.getItem("portfolio-theme") || "light";
+  } catch (_) {}
 
   function setTheme(theme) {
     const isDark = theme === "dark";
@@ -19,7 +22,9 @@
   setTheme(savedTheme === "dark" ? "dark" : "light");
   themeToggles.forEach((button) => button.addEventListener("click", () => {
     const nextTheme = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
-    localStorage.setItem("portfolio-theme", nextTheme);
+    try {
+      localStorage.setItem("portfolio-theme", nextTheme);
+    } catch (_) {}
     setTheme(nextTheme);
   }));
 

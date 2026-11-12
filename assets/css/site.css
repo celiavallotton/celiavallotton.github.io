@@ -23,6 +23,17 @@
   --accent: #e18a69;
   --accent-dark: #f0a184;
 }
+:root[data-theme="dark"] body,
+:root[data-theme="dark"] .site-header,
+:root[data-theme="dark"] .site-footer,
+:root[data-theme="dark"] .project-card,
+:root[data-theme="dark"] .collection-card,
+:root[data-theme="dark"] .experience-photo-area,
+:root[data-theme="dark"] .lightbox,
+:root[data-theme="dark"] .primary-nav {
+  background-color: #151b1f;
+  color: #edf2f3;
+}
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; scroll-padding-top: calc(var(--header-height) + 18px); }
 body { margin: 0; background: var(--paper); color: var(--ink); font: 15px/1.6 var(--sans); }

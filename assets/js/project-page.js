@@ -1,5 +1,9 @@
 (function () {
   const themeToggles = document.querySelectorAll(".theme-toggle");
+  let savedTheme = "light";
+  try {
+    savedTheme = localStorage.getItem("portfolio-theme") || "light";
+  } catch (_) {}
   function setTheme(theme) {
     const isDark = theme === "dark";
     document.documentElement.dataset.theme = isDark ? "dark" : "light";
@@ -13,10 +17,12 @@
       if (label) label.textContent = isDark ? "Light mode" : "Dark mode";
     });
   }
-  setTheme(localStorage.getItem("portfolio-theme") === "dark" ? "dark" : "light");
+  setTheme(savedTheme === "dark" ? "dark" : "light");
   themeToggles.forEach((button) => button.addEventListener("click", () => {
     const nextTheme = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
-    localStorage.setItem("portfolio-theme", nextTheme);
+    try {
+      localStorage.setItem("portfolio-theme", nextTheme);
+    } catch (_) {}
     setTheme(nextTheme);
   }));
 
