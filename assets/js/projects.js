@@ -126,9 +126,9 @@ window.PORTFOLIO_PROJECTS = [
 
 window.PORTFOLIO_SKILLS = [
   { title: "CAD & mechanical design", skills: [["SolidWorks", "Advanced student use"], ["Autodesk Inventor", "Proficient"], ["Engineering design", "Proficient"], ["Driver ergonomics", "Learning in progress through Baja SAE"]] },
-  { title: "Engineering analysis", skills: [["SolidWorks Simulation FEA", "Basic"], ["Statics", "Coursework and Application in Projects"], ["Material properties", "Basic"], ["Metallurgy", "Coursework"]] },
+  { title: "Engineering analysis", skills: [["SolidWorks Simulation FEA", "Basic"], ["Statics", "Coursework and Application in Projects"], ["Material properties", "Basic"], ["Metallurgy", "Basic-Coursework"]] },
   { title: "Manufacturing & fabrication", skills: [["CNC machining & programming", "Intermediate"], ["Manual machining", "Intermediate"], ["Quality inspection", "Intermediate"], ["3D printing", "Proficient"], ["Rapid prototyping", "Proficient"], ["Tube notching", "Proficient"], ["Weld fixture design", "Proficient"]] },
-  { title: "Software", skills: [["FeatureCAM", "Level to confirm"], ["MATLAB", "Level to confirm"], ["Excel", "Level to confirm"]] },
+  { title: "Software", skills: [["FeatureCAM", "Basic"], ["MATLAB", "Basic-Coursework"], ["Excel", "Proficient"]] },
   { title: "Communication & languages", skills: [["Project coordination", "Proficient"], ["Team collaboration", "Proficient"], ["Engineering outreach", "Experienced"], ["English", "Fluent"], ["Spanish", "Intermediate"]] }
 ];
 
