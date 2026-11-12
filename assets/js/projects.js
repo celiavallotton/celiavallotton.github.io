@@ -125,12 +125,13 @@ window.PORTFOLIO_PROJECTS = [
 ];
 
 window.PORTFOLIO_SKILLS = [
-  { title: "CAD & mechanical design", skills: [["SolidWorks", "Advanced student use"], ["Autodesk Inventor", "Level to confirm"], ["Engineering design", "Level to confirm"], ["Driver ergonomics", "Level to confirm"]] },
-  { title: "Engineering analysis", skills: [["SolidWorks Simulation FEA", "Level to confirm"], ["Statics", "Coursework"], ["Material properties", "Level to confirm"], ["Metallurgy", "Level to confirm"]] },
-  { title: "Manufacturing & fabrication", skills: [["CNC machining & programming", "Level to confirm"], ["Manual machining", "Level to confirm"], ["Quality inspection", "Level to confirm"], ["3D printing", "Level to confirm"], ["Rapid prototyping", "Level to confirm"], ["Tube notching", "Level to confirm"], ["Weld fixture design", "Level to confirm"]] },
+  { title: "CAD & mechanical design", skills: [["SolidWorks", "Advanced student use"], ["Autodesk Inventor", "Proficient"], ["Engineering design", "Proficient"], ["Driver ergonomics", "Learning in progress through Baja SAE"]] },
+  { title: "Engineering analysis", skills: [["SolidWorks Simulation FEA", "Basic"], ["Statics", "Coursework and Application in Projects"], ["Material properties", "Basic"], ["Metallurgy", "Coursework"]] },
+  { title: "Manufacturing & fabrication", skills: [["CNC machining & programming", "Intermediate"], ["Manual machining", "Intermediate"], ["Quality inspection", "Intermediate"], ["3D printing", "Proficient"], ["Rapid prototyping", "Proficient"], ["Tube notching", "Proficient"], ["Weld fixture design", "Proficient"]] },
   { title: "Software", skills: [["FeatureCAM", "Level to confirm"], ["MATLAB", "Level to confirm"], ["Excel", "Level to confirm"]] },
-  { title: "Communication & languages", skills: [["Project coordination", "Level to confirm"], ["Team collaboration", "Level to confirm"], ["Engineering outreach", "Experience"], ["English", "Fluent"], ["Spanish", "Intermediate"]] }
+  { title: "Communication & languages", skills: [["Project coordination", "Proficient"], ["Team collaboration", "Proficient"], ["Engineering outreach", "Experienced"], ["English", "Fluent"], ["Spanish", "Intermediate"]] }
 ];
+
 
 /* Independent woodworking builds belong here, not under Sonoma Millworks. */
 window.PERSONAL_WOODWORKING_PROJECTS = [
