@@ -1,4 +1,28 @@
 (function () {
+  const themeToggles = document.querySelectorAll(".theme-toggle");
+  const savedTheme = localStorage.getItem("portfolio-theme");
+
+  function setTheme(theme) {
+    const isDark = theme === "dark";
+    document.documentElement.dataset.theme = isDark ? "dark" : "light";
+    document.documentElement.style.colorScheme = isDark ? "dark" : "light";
+    themeToggles.forEach((button) => {
+      button.setAttribute("aria-pressed", String(isDark));
+      button.setAttribute("aria-label", "Switch to " + (isDark ? "light" : "dark") + " mode");
+      const icon = button.querySelector(".theme-toggle-icon");
+      const label = button.querySelector(".theme-toggle-label");
+      if (icon) icon.textContent = isDark ? "☀" : "☾";
+      if (label) label.textContent = isDark ? "Light mode" : "Dark mode";
+    });
+  }
+
+  setTheme(savedTheme === "dark" ? "dark" : "light");
+  themeToggles.forEach((button) => button.addEventListener("click", () => {
+    const nextTheme = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
+    localStorage.setItem("portfolio-theme", nextTheme);
+    setTheme(nextTheme);
+  }));
+
   const escapeHtml = (value) => String(value).replace(/[&<>"']/g, (char) => ({
     "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"
   })[char]);
