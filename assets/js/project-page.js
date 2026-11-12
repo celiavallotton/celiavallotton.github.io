@@ -83,8 +83,8 @@
   const tools = project.tools?.length
     ? '<ul>' + project.tools.map((item) => '<li>' + esc(item) + '</li>').join("") + '</ul>'
     : "";
-  const projectPriority = ["baja-chassis", "tensile-tester", "machining", "small-engineering", "ceramics", "woodworking", "coffee-kiosk", "sonoma-millworks", "wave-energy", "rube-goldberg"];
-  const sequence = projects.filter((item) => item.showInEngineering !== false).sort((a, b) => {
+  const projectPriority = ["baja-chassis", "tensile-tester", "machining", "small-engineering", "ceramics", "woodworking", "coffee-kiosk", "wave-energy", "rube-goldberg"];
+  const sequence = projects.filter((item) => item.showInEngineering !== false && item.id !== "sonoma-millworks").sort((a, b) => {
     const ai = projectPriority.indexOf(a.id);
     const bi = projectPriority.indexOf(b.id);
     return (ai < 0 ? projectPriority.length : ai) - (bi < 0 ? projectPriority.length : bi);

@@ -3,8 +3,8 @@
     "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"
   })[char]);
   const projectList = window.PORTFOLIO_PROJECTS || [];
-  const priority = ["baja-chassis", "tensile-tester", "machining", "small-engineering", "ceramics", "woodworking", "coffee-kiosk", "sonoma-millworks", "wave-energy", "rube-goldberg"];
-  const projects = projectList.filter((project) => project.showInEngineering !== false).sort((a, b) => {
+  const priority = ["baja-chassis", "tensile-tester", "machining", "small-engineering", "ceramics", "woodworking", "coffee-kiosk", "wave-energy", "rube-goldberg"];
+  const projects = projectList.filter((project) => project.showInEngineering !== false && project.id !== "sonoma-millworks").sort((a, b) => {
     const ai = priority.indexOf(a.id);
     const bi = priority.indexOf(b.id);
     return (ai < 0 ? priority.length : ai) - (bi < 0 ? priority.length : bi);
@@ -64,17 +64,26 @@
     ).join("");
   }
 
-  const roastingGrid = document.getElementById("cequin-roasting-grid");
-  if (roastingGrid) {
-    roastingGrid.innerHTML = (window.CEQUIN_ROASTING_PHOTOS || []).map((photo) =>
+  function renderExperienceGallery(id, photos) {
+    const root = document.getElementById(id);
+    if (!root) return;
+    root.innerHTML = (photos || []).map((photo) =>
       '<article class="collection-card">' +
         (photo.src
           ? '<img class="collection-image" src="' + escapeHtml(photo.src) + '" alt="' + escapeHtml(photo.alt || photo.title) + '" loading="lazy">'
-          : '<div class="collection-image image-placeholder">Add roasting photo</div>') +
+          : '<div class="collection-image image-placeholder">Add photo</div>') +
         '<div class="collection-card-copy"><h4>' + escapeHtml(photo.title) + '</h4><p>' + escapeHtml(photo.summary) + '</p></div>' +
       '</article>'
     ).join("");
   }
+  renderExperienceGallery("cequin-roasting-grid", window.CEQUIN_ROASTING_PHOTOS);
+  renderExperienceGallery("cequin-events-grid", window.CEQUIN_EVENT_PHOTOS);
+  renderExperienceGallery("sonoma-gallery-grid", window.SONOMA_GALLERY_PHOTOS);
+  renderExperienceGallery("sonoma-work-grid", window.SONOMA_WORK_PHOTOS);
+  document.querySelectorAll(".education-item").forEach((item) => {
+    const logo = item.querySelector(".school-logo");
+    if (logo) logo.addEventListener("error", () => logo.remove(), { once: true });
+  });
 
   const menuButton = document.querySelector(".menu-toggle");
   const nav = document.getElementById("primary-nav");

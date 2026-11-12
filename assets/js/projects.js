@@ -160,6 +160,23 @@ window.CEQUIN_ROASTING_PHOTOS = [
   { title: "Roasted coffee", summary: "Add a photo and notes about the roasted coffee or production stage.", alt: "Placeholder for a Cequin Coffee roasted coffee photo.", folder: "assets/images/coffee-business/", src: "" }
 ];
 
+window.CEQUIN_EVENT_PHOTOS = [
+  { title: "Race event", summary: "Cequin Coffee serving at a race event.", src: "assets/images/coffee-business/cq-at-race-1.webp", alt: "Cequin Coffee setup at a race event." },
+  { title: "HRC event stand", summary: "Coffee stand prepared for an event.", src: "assets/images/coffee-business/cq-stand-at-hrc.webp", alt: "Cequin Coffee event stand at HRC." }
+];
+window.SONOMA_GALLERY_PHOTOS = [
+  { title: "VinoPlank Sprig Vases", summary: "Reclaimed wood product work.", src: "assets/images/sonoma-millworks/vino-plank-sprig-vases.webp", alt: "VinoPlank sprig vases made from reclaimed wood." },
+  { title: "Showroom", summary: "Finished products on display.", src: "assets/images/sonoma-millworks/smw-showroom.webp", alt: "Products displayed in the Sonoma Millworks showroom." },
+  { title: "Workshop", summary: "A view inside the Millworks space.", src: "assets/images/sonoma-millworks/smw-1.webp", alt: "Sonoma Millworks workshop." }
+];
+window.SONOMA_WORK_PHOTOS = [
+  { title: "Active work", summary: "Working on a custom project at Montage.", src: "assets/images/sonoma-millworks/smw-at-montage-working.webp", alt: "Working on a Sonoma Millworks project at Montage." },
+  { title: "Montage event", summary: "Custom work presented at Montage.", src: "assets/images/sonoma-millworks/smw-at-montage-me.webp", alt: "Sonoma Millworks work at Montage." },
+  { title: "Framing", summary: "Framing and fabrication in progress.", src: "assets/images/sonoma-millworks/smw-framing.webp", alt: "Wood framing work in progress." },
+  { title: "Montage leather work", summary: "Leather details prepared for a Montage project.", src: "assets/images/sonoma-millworks/smw-at-montage-leather.webp", alt: "Leather detail for Sonoma Millworks at Montage." },
+  { title: "Montage book work", summary: "Custom book work for a Montage project.", src: "assets/images/sonoma-millworks/smw-at-montage-book.webp", alt: "Custom book at a Sonoma Millworks Montage project." }
+];
+
 window.SMALL_ENGINEERING_PROJECTS = [
   { title: "Egg-drop device", summary: "An assembled mechanical frame developed for an egg-drop challenge.", src: "assets/images/small-eng-side-projects/eggdrop-assembled.webp", alt: "Assembled frame-based device for an egg-drop challenge." },
   { title: "Gear mechanism", summary: "A small mechanism showing a set of meshing gears and its support structure.", src: "assets/images/small-eng-side-projects/gears.webp", alt: "Compact gear mechanism mounted on a perforated support frame." },

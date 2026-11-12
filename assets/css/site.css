@@ -115,8 +115,16 @@ p { margin-bottom: 14px; }
 .education-panel, .experience-panel { min-width: 0; }
 .education-panel > h3, .experience-panel > h3 { margin-bottom: 16px; padding-bottom: 10px; border-bottom: 1px solid var(--line); font-size: 18px; }
 .education-item { margin-bottom: 21px; }
+.school-logo { display: block; width: auto; max-width: min(100%, 210px); height: 46px; object-fit: contain; object-position: left center; margin: 0 0 12px; }
+.school-logo-link { display: block; width: max-content; margin-bottom: 12px; text-decoration: none; }
+.school-logo-text { display: grid; min-width: 74px; place-items: center; padding: 4px 9px; border: 2px solid #99263a; color: #17304b; font-family: Georgia, serif; font-size: 21px; font-weight: 700; letter-spacing: .04em; }
+.school-logo-hhs { width: 58px; height: 58px; }
 .education-item h4 { margin-bottom: 5px; }
 .education-item p { margin-bottom: 6px; color: #46535a; font-size: 12px; }
+.education-highlights { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--line); }
+.education-highlights h5 { margin: 0 0 6px; font-size: 11px; }
+.education-highlights ul { display: flex; flex-wrap: wrap; gap: 6px; margin: 0; padding: 0; list-style: none; }
+.education-highlights li { padding: 5px 8px; border: 1px solid var(--line); color: #46535a; font-size: 10px; }
 .education-meta { color: var(--muted) !important; }
 .coursework-list { display: grid; grid-template-columns: 1fr; gap: 3px; margin: 13px 0 0; font-size: 11px; }
 .coursework-list dt { margin-top: 7px; color: var(--ink); font-weight: 650; }
@@ -130,6 +138,7 @@ p { margin-bottom: 14px; }
 .experience-item ul { margin: 8px 0 10px; padding-left: 18px; color: #46535a; font-size: 11px; }
 .experience-item li + li { margin-top: 4px; }
 .experience-photo-area { margin: 12px 0; padding: 13px; background: #fff; border: 1px solid var(--line); }
+.experience-gallery-collections { display: grid; grid-template-columns: 1fr; gap: 4px; }
 .experience-photo-area h5 { margin: 0 0 4px; font-size: 13px; }
 .experience-photo-area > p { margin: 0 0 10px; color: var(--muted); font-size: 11px; }
 .experience-photo-area .collection-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 9px; }

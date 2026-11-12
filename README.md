@@ -105,7 +105,7 @@ Sonoma Millworks is included in Projects and Professional Experience. Cequin Cof
 
 - Edit `window.PORTFOLIO_SKILLS` in `assets/js/projects.js`. SolidWorks is currently listed as “Advanced student use”; other levels are marked for confirmation.
 - Edit the Home, Education and Professional Experience, and Contact sections directly in `index.html`.
-- The Contact section uses the current email address, GitHub profile, and Santa Rosa location. Update these directly in `index.html` if they change.
+- The Contact section uses the current email address, LinkedIn profile, and Santa Rosa location. Update these directly in `index.html` if they change.
 - Keep dates, qualifications, technical results, and project status current and verified.
 
 ## Replace the resume PDF
