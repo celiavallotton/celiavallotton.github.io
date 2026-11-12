@@ -309,7 +309,7 @@ collectionCaseStudies.forEach((project) => {
   window.PORTFOLIO_PROJECTS.push(project);
 });
 
-const documentationTopics = {
+ const documentationTopics = {
   "baja-chassis": ["Frame layout and design documentation", "PVC prototype evaluation", "Fixture design and fabrication records", "Tube layout, notching, and fit-up observations"],
   "tensile-tester": ["Part drawings and assembly", "Fabrication and instrumentation", "Test method and calibration", "Material test records and results"],
   "wave-energy": ["System layout and design revisions", "Mechanical and electrical integration", "Ocean test setup", "Recorded observations and measurements"],
